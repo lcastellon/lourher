@@ -5,21 +5,23 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       {
-        title: "Dra. María Reyes Salazar — Desarrollo Regional, Tlaxcala",
+        title:
+          "Dra. María de Lourdes Hernández Rodríguez — Desarrollo Regional, Tlaxcala",
       },
       {
         name: "description",
         content:
-          "Investigadora en ciencias sociales especializada en desarrollo regional en Tlaxcala, México. Migración, economía rural y gobernanza local.",
+          "Profesora-Investigadora en El Colegio de Tlaxcala, A.C. Gestión del agua, conflictos ambientales y ordenamiento territorial en Tlaxcala, México.",
       },
       {
         property: "og:title",
-        content: "Dra. María Reyes Salazar — Desarrollo Regional, Tlaxcala",
+        content:
+          "Dra. María de Lourdes Hernández Rodríguez — Desarrollo Regional, Tlaxcala",
       },
       {
         property: "og:description",
         content:
-          "Investigación sobre migración, economía rural y gobernanza local en Tlaxcala, México.",
+          "Investigación transdisciplinaria sobre sustentabilidad hídrica, conflictos ambientales y ordenamiento territorial en Tlaxcala, México.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -30,6 +32,7 @@ export const Route = createFileRoute("/")({
 
 const navLinks = [
   { href: "#lineas", label: "Líneas" },
+  { href: "#trayectoria", label: "Trayectoria" },
   { href: "#publicaciones", label: "Publicaciones" },
   { href: "#contacto", label: "Contacto" },
 ];
@@ -37,47 +40,91 @@ const navLinks = [
 const researchLines = [
   {
     number: "01",
-    color: "text-terra",
-    title: "Migración y territorio",
-    body: "Flujos de población y su efecto en la estructura productiva de los municipios tlaxcaltecas.",
+    color: "text-cobalt",
+    title: "Gestión del agua",
+    body: "El agua como Recurso de Uso Común: sustentabilidad hídrica y manejo de cuencas en Tlaxcala y la región.",
     delay: "60ms",
   },
   {
     number: "02",
-    color: "text-cobalt",
-    title: "Economía rural",
-    body: "Cadenas de valor, agricultura y resiliencia de las pequeñas unidades productivas del campo.",
+    color: "text-terra",
+    title: "Conflictos ambientales",
+    body: "Contaminación de los ríos Atoyac y Zahuapan, y las disputas socioambientales que atraviesan el territorio.",
     delay: "120ms",
   },
   {
     number: "03",
     color: "text-sage",
-    title: "Gobernanza local",
-    body: "Participación comunitaria y toma de decisiones en los gobiernos municipales del centro del país.",
+    title: "Ordenamiento territorial",
+    body: "Programas municipales de ordenamiento territorial y desarrollo urbano, y acción ante el cambio climático.",
     delay: "180ms",
+  },
+];
+
+const trajectory = [
+  {
+    label: "Formación",
+    text: "Doctora en Ciencias en Estrategias de Desarrollo Agrícola Regional, El Colegio de Postgraduados, Campus Puebla.",
+  },
+  {
+    label: "Adscripción",
+    text: "Profesora-Investigadora \u201cB\u201d en El Colegio de Tlaxcala, A.C. Ex Coordinadora del Doctorado en Desarrollo Regional.",
+  },
+  {
+    label: "Reconocimiento",
+    text: "Miembro del Sistema Nacional de Investigadores (SNI), nivel II.",
+  },
+  {
+    label: "Formación de cuadros",
+    text: "Dirección de 5 tesis de licenciatura, 12 de maestría y 11 de doctorado.",
+  },
+  {
+    label: "Liderazgo",
+    text: "Líder y representante institucional del GATTACA, grupo técnico transdisciplinario para la restauración integral de la cuenca del Atoyac.",
+  },
+  {
+    label: "Redes",
+    text: "Red Temática Gestión e Investigación del Agua, Investigadores Sociales del Agua, Expertos ODS 21 y Conflictos Ambientales de América Latina. Mentora STEAM para mujeres y niñas en la ciencia.",
+  },
+];
+
+const projects = [
+  {
+    year: "2023–2024",
+    title:
+      "Programa Municipal de Ordenamiento Territorial y Desarrollo Urbano, Santa Cruz Tlaxcala",
+  },
+  {
+    year: "2022–2023",
+    title:
+      "Programa Municipal de Ordenamiento Territorial y Desarrollo Urbano, Tepetitla de Lardizábal",
+  },
+  {
+    year: "2011",
+    title: "Programa Estatal de Acciones ante el Cambio Climático",
   },
 ];
 
 const publications = [
   {
-    year: "2024",
-    title: "Migrar el valle: movilidad y desarrollo en Tlaxcala, 1990–2020",
-    source: "Revista Mexicana de Estudios Regionales, vol. 12, pp. 45–78.",
-    type: "Artículo",
+    title:
+      "Río Atoyac: hacia una gestión integral de una problemática multifactorial",
+    type: "Libro",
   },
   {
-    year: "2023",
-    title: "Gobernanza comunitaria y resiliencia rural en el centro de México",
-    source: "El Colegio de México, Serie Desarrollo Regional, n.º 34.",
-    type: "Capítulo",
+    title: "El Zahuapan: Río–Región–Contaminación",
+    type: "Libro",
   },
   {
-    year: "2022",
-    title: "Cadenas de valor agrícola y empleo en los municipios de Tlaxcala",
-    source: "CIDE, Documento de Trabajo en Economía, n.º 2022-08.",
-    type: "Documento",
+    title: "Calidad del agua para la agricultura protegida en Tlaxcala",
+    type: "Libro",
+  },
+  {
+    title: "La crisis del agua en el siglo XXI: perspectivas y soluciones",
+    type: "Libro",
   },
 ];
+
 
 function Index() {
   return (
