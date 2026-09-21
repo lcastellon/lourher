@@ -363,19 +363,35 @@ function Index() {
                 de investigación aplicada en la cuenca del Atoyac y la región
                 centro de México.
               </p>
+              <div className="mt-6 flex flex-wrap items-center gap-4">
+                <a
+                  href={`mailto:${email}`}
+                  className="rounded-full bg-ink px-5 py-3 text-sm font-medium text-paper transition-colors hover:bg-terra"
+                >
+                  {email}
+                </a>
+                <a
+                  href={scholarUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="rounded-full border border-line px-5 py-3 text-sm font-medium transition-colors hover:border-ink"
+                >
+                  Google Scholar
+                </a>
+              </div>
             </div>
             <div className="md:col-span-6 md:text-right">
               <p className="font-display text-2xl italic text-terra">
                 El Colegio de Tlaxcala, A.C.
               </p>
               <p className="mt-4 font-mono text-[11px] uppercase tracking-[0.15em] text-muted-foreground">
-                Profesora-Investigadora "B"
+                Profesora-Investigadora "B" · CEDRAE
               </p>
               <p className="font-mono text-[11px] uppercase tracking-[0.15em] text-muted-foreground">
                 Doctorado en Desarrollo Regional
               </p>
               <p className="font-mono text-[11px] uppercase tracking-[0.15em] text-muted-foreground">
-                Tlaxcala, México
+                Tlaxcala, Tlaxcala, México
               </p>
             </div>
           </div>
