@@ -211,21 +211,6 @@ function Index() {
               </a>
             </div>
           </div>
-          <div className="animate-[rise_1.1s_cubic-bezier(0.32,0.72,0,1)_120ms_both] lg:col-span-5">
-            <div className="prism rounded-2xl p-4">
-              <img
-                src={valleMap}
-                alt="Mapa topográfico anotado del valle de Tlaxcala"
-                width={1024}
-                height={1280}
-                className="w-full rounded-lg outline-1 -outline-offset-1 outline-black/5"
-              />
-              <div className="mt-4 flex items-center justify-between font-mono text-[10px] uppercase tracking-[0.15em] text-muted-foreground">
-                <span>Valle de Tlaxcala</span>
-                <span>Fig. 01</span>
-              </div>
-            </div>
-          </div>
         </div>
       </section>
 
