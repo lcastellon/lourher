@@ -1,24 +1,275 @@
 import { createFileRoute } from "@tanstack/react-router";
+import valleMap from "@/assets/valle-tlaxcala.png";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      {
+        title: "Dra. María Reyes Salazar — Desarrollo Regional, Tlaxcala",
+      },
+      {
+        name: "description",
+        content:
+          "Investigadora en ciencias sociales especializada en desarrollo regional en Tlaxcala, México. Migración, economía rural y gobernanza local.",
+      },
+      {
+        property: "og:title",
+        content: "Dra. María Reyes Salazar — Desarrollo Regional, Tlaxcala",
+      },
+      {
+        property: "og:description",
+        content:
+          "Investigación sobre migración, economía rural y gobernanza local en Tlaxcala, México.",
+      },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+  }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
+const navLinks = [
+  { href: "#lineas", label: "Líneas" },
+  { href: "#publicaciones", label: "Publicaciones" },
+  { href: "#contacto", label: "Contacto" },
+];
+
+const researchLines = [
+  {
+    number: "01",
+    color: "text-terra",
+    title: "Migración y territorio",
+    body: "Flujos de población y su efecto en la estructura productiva de los municipios tlaxcaltecas.",
+    delay: "60ms",
+  },
+  {
+    number: "02",
+    color: "text-cobalt",
+    title: "Economía rural",
+    body: "Cadenas de valor, agricultura y resiliencia de las pequeñas unidades productivas del campo.",
+    delay: "120ms",
+  },
+  {
+    number: "03",
+    color: "text-sage",
+    title: "Gobernanza local",
+    body: "Participación comunitaria y toma de decisiones en los gobiernos municipales del centro del país.",
+    delay: "180ms",
+  },
+];
+
+const publications = [
+  {
+    year: "2024",
+    title: "Migrar el valle: movilidad y desarrollo en Tlaxcala, 1990–2020",
+    source: "Revista Mexicana de Estudios Regionales, vol. 12, pp. 45–78.",
+    type: "Artículo",
+  },
+  {
+    year: "2023",
+    title: "Gobernanza comunitaria y resiliencia rural en el centro de México",
+    source: "El Colegio de México, Serie Desarrollo Regional, n.º 34.",
+    type: "Capítulo",
+  },
+  {
+    year: "2022",
+    title: "Cadenas de valor agrícola y empleo en los municipios de Tlaxcala",
+    source: "CIDE, Documento de Trabajo en Economía, n.º 2022-08.",
+    type: "Documento",
+  },
+];
+
 function Index() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
+    <div className="min-h-screen bg-paper font-body text-ink antialiased selection:bg-terra/20">
+      {/* Nav */}
+      <header className="sticky top-0 z-30 border-b border-line bg-paper/70 backdrop-blur-md">
+        <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
+          <div className="flex items-baseline gap-3">
+            <span className="font-display text-lg font-semibold tracking-tight">
+              M. Reyes
+            </span>
+            <span className="hidden font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground sm:inline">
+              Ciencias Sociales
+            </span>
+          </div>
+          <nav className="flex items-center gap-6 font-mono text-[11px] uppercase tracking-[0.15em] text-muted-foreground">
+            {navLinks.map((link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                className="transition-colors hover:text-ink"
+              >
+                {link.label}
+              </a>
+            ))}
+          </nav>
+        </div>
+      </header>
+
+      {/* Hero */}
+      <section className="mx-auto max-w-6xl px-6 pt-16 pb-12">
+        <div className="grid grid-cols-1 items-end gap-10 lg:grid-cols-12">
+          <div className="animate-[rise_0.8s_cubic-bezier(0.32,0.72,0,1)_both] lg:col-span-7">
+            <p className="mb-6 font-mono text-[11px] uppercase tracking-[0.25em] text-terra">
+              Investigadora · Desarrollo Regional
+            </p>
+            <h1 className="font-display text-[clamp(2.75rem,7vw,5.5rem)] leading-[0.95] font-semibold tracking-tight text-balance">
+              María <span className="italic text-terra">Reyes</span> Salazar
+            </h1>
+            <p className="mt-6 max-w-[42ch] font-display text-xl text-pretty italic text-muted-foreground">
+              "El territorio no se planifica desde el escritorio; se lee desde
+              el camino."
+            </p>
+            <p className="mt-6 max-w-[52ch] text-sm leading-relaxed text-pretty text-muted-foreground">
+              Estudio las dinámicas de desarrollo regional en Tlaxcala:
+              migración, economía rural y gobernanza local. Mi trabajo cruza el
+              archivo con la caminata, la estadística con la memoria de quienes
+              habitan el valle.
+            </p>
+            <div className="mt-8 flex flex-wrap items-center gap-4">
+              <a
+                href="#lineas"
+                className="rounded-full bg-ink px-5 py-3 text-sm font-medium text-paper transition-colors hover:bg-terra"
+              >
+                Ver líneas de investigación
+              </a>
+              <a
+                href="#contacto"
+                className="rounded-full border border-line px-5 py-3 text-sm font-medium transition-colors hover:border-ink"
+              >
+                Contactar
+              </a>
+            </div>
+          </div>
+          <div className="animate-[rise_1.1s_cubic-bezier(0.32,0.72,0,1)_120ms_both] lg:col-span-5">
+            <div className="prism rounded-2xl p-4">
+              <img
+                src={valleMap}
+                alt="Mapa topográfico anotado del valle de Tlaxcala"
+                width={1024}
+                height={1280}
+                className="w-full rounded-lg outline-1 -outline-offset-1 outline-black/5"
+              />
+              <div className="mt-4 flex items-center justify-between font-mono text-[10px] uppercase tracking-[0.15em] text-muted-foreground">
+                <span>Valle de Tlaxcala</span>
+                <span>Fig. 01</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Research lines */}
+      <section id="lineas" className="mx-auto max-w-6xl scroll-mt-20 px-6 py-16">
+        <div className="mb-10 flex items-baseline justify-between border-b border-line pb-4">
+          <h2 className="font-display text-3xl font-semibold tracking-tight">
+            Líneas de investigación
+          </h2>
+          <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
+            (a)
+          </span>
+        </div>
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
+          {researchLines.map((line) => (
+            <div
+              key={line.number}
+              className="prism animate-[rise_0.8s_cubic-bezier(0.32,0.72,0,1)_both] rounded-2xl p-6 transition-colors hover:bg-card/60"
+              style={{ animationDelay: line.delay }}
+            >
+              <span
+                className={`font-mono text-[10px] uppercase tracking-[0.2em] ${line.color}`}
+              >
+                {line.number}
+              </span>
+              <h3 className="mt-3 font-display text-xl font-semibold tracking-tight">
+                {line.title}
+              </h3>
+              <p className="mt-3 text-sm leading-relaxed text-pretty text-muted-foreground">
+                {line.body}
+              </p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Publications */}
+      <section
+        id="publicaciones"
+        className="mx-auto max-w-6xl scroll-mt-20 px-6 py-16"
+      >
+        <div className="mb-8 flex items-baseline justify-between border-b border-line pb-4">
+          <h2 className="font-display text-3xl font-semibold tracking-tight">
+            Publicaciones seleccionadas
+          </h2>
+          <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
+            (b)
+          </span>
+        </div>
+        <ul className="divide-y divide-line">
+          {publications.map((pub) => (
+            <li
+              key={pub.title}
+              className="grid grid-cols-1 gap-2 py-5 md:grid-cols-12 md:gap-6"
+            >
+              <span className="font-mono text-xs text-muted-foreground md:col-span-1">
+                {pub.year}
+              </span>
+              <div className="md:col-span-8">
+                <p className="font-display text-lg tracking-tight">
+                  "{pub.title}"
+                </p>
+                <p className="mt-1 text-sm text-muted-foreground">{pub.source}</p>
+              </div>
+              <span className="font-mono text-[10px] uppercase tracking-[0.15em] text-muted-foreground md:col-span-3 md:text-right">
+                {pub.type}
+              </span>
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      {/* Contact */}
+      <footer id="contacto" className="mt-8 border-t border-line">
+        <div className="mx-auto max-w-6xl scroll-mt-20 px-6 py-16">
+          <div className="grid grid-cols-1 gap-10 md:grid-cols-12">
+            <div className="md:col-span-6">
+              <p className="mb-4 font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
+                (c) Contacto
+              </p>
+              <h2 className="font-display text-4xl font-semibold tracking-tight text-balance">
+                Conversemos sobre el territorio.
+              </h2>
+              <p className="mt-4 max-w-[40ch] text-sm leading-relaxed text-pretty text-muted-foreground">
+                Disponible para colaboraciones, docencia y proyectos de
+                investigación aplicada en el centro de México.
+              </p>
+            </div>
+            <div className="md:col-span-6 md:text-right">
+              <a
+                href="mailto:maria.reyes@universidad.mx"
+                className="font-display text-2xl italic text-terra transition-colors hover:text-ink"
+              >
+                maria.reyes@universidad.mx
+              </a>
+              <p className="mt-4 font-mono text-[11px] uppercase tracking-[0.15em] text-muted-foreground">
+                Departamento de Ciencias Sociales
+              </p>
+              <p className="font-mono text-[11px] uppercase tracking-[0.15em] text-muted-foreground">
+                Tlaxcala, México
+              </p>
+            </div>
+          </div>
+          <div className="mt-14 flex flex-col items-start justify-between gap-3 border-t border-line pt-6 sm:flex-row sm:items-center">
+            <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
+              © 2026 María Reyes Salazar
+            </span>
+            <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
+              Notas de campo · Tlaxcala
+            </span>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }
