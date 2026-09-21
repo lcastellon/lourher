@@ -191,10 +191,10 @@ function Index() {
               entera y con quienes la habitan."
             </p>
             <p className="mt-6 max-w-[52ch] text-sm leading-relaxed text-pretty text-muted-foreground">
-              Profesora-Investigadora en El Colegio de Tlaxcala, A.C. Investigo
-              la gestión del agua, los conflictos ambientales y el ordenamiento
-              territorial en Tlaxcala, desde un enfoque crítico y
-              transdisciplinario.
+              Profesora-Investigadora en El Colegio de Tlaxcala, A.C., con 23
+              años de docencia e investigación en posgrado. Trabajo la gestión
+              del agua, la planificación participativa y el turismo alternativo
+              desde un enfoque crítico y transdisciplinario.
             </p>
 
             <div className="mt-8 flex flex-wrap items-center gap-4">
