@@ -5,21 +5,23 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       {
-        title: "Dra. María Reyes Salazar — Desarrollo Regional, Tlaxcala",
+        title:
+          "Dra. María de Lourdes Hernández Rodríguez — Desarrollo Regional, Tlaxcala",
       },
       {
         name: "description",
         content:
-          "Investigadora en ciencias sociales especializada en desarrollo regional en Tlaxcala, México. Migración, economía rural y gobernanza local.",
+          "Profesora-Investigadora en El Colegio de Tlaxcala, A.C. Gestión del agua, conflictos ambientales y ordenamiento territorial en Tlaxcala, México.",
       },
       {
         property: "og:title",
-        content: "Dra. María Reyes Salazar — Desarrollo Regional, Tlaxcala",
+        content:
+          "Dra. María de Lourdes Hernández Rodríguez — Desarrollo Regional, Tlaxcala",
       },
       {
         property: "og:description",
         content:
-          "Investigación sobre migración, economía rural y gobernanza local en Tlaxcala, México.",
+          "Investigación transdisciplinaria sobre sustentabilidad hídrica, conflictos ambientales y ordenamiento territorial en Tlaxcala, México.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -30,6 +32,7 @@ export const Route = createFileRoute("/")({
 
 const navLinks = [
   { href: "#lineas", label: "Líneas" },
+  { href: "#trayectoria", label: "Trayectoria" },
   { href: "#publicaciones", label: "Publicaciones" },
   { href: "#contacto", label: "Contacto" },
 ];
@@ -37,47 +40,91 @@ const navLinks = [
 const researchLines = [
   {
     number: "01",
-    color: "text-terra",
-    title: "Migración y territorio",
-    body: "Flujos de población y su efecto en la estructura productiva de los municipios tlaxcaltecas.",
+    color: "text-cobalt",
+    title: "Gestión del agua",
+    body: "El agua como Recurso de Uso Común: sustentabilidad hídrica y manejo de cuencas en Tlaxcala y la región.",
     delay: "60ms",
   },
   {
     number: "02",
-    color: "text-cobalt",
-    title: "Economía rural",
-    body: "Cadenas de valor, agricultura y resiliencia de las pequeñas unidades productivas del campo.",
+    color: "text-terra",
+    title: "Conflictos ambientales",
+    body: "Contaminación de los ríos Atoyac y Zahuapan, y las disputas socioambientales que atraviesan el territorio.",
     delay: "120ms",
   },
   {
     number: "03",
     color: "text-sage",
-    title: "Gobernanza local",
-    body: "Participación comunitaria y toma de decisiones en los gobiernos municipales del centro del país.",
+    title: "Ordenamiento territorial",
+    body: "Programas municipales de ordenamiento territorial y desarrollo urbano, y acción ante el cambio climático.",
     delay: "180ms",
+  },
+];
+
+const trajectory = [
+  {
+    label: "Formación",
+    text: "Doctora en Ciencias en Estrategias de Desarrollo Agrícola Regional, El Colegio de Postgraduados, Campus Puebla.",
+  },
+  {
+    label: "Adscripción",
+    text: "Profesora-Investigadora \u201cB\u201d en El Colegio de Tlaxcala, A.C. Ex Coordinadora del Doctorado en Desarrollo Regional.",
+  },
+  {
+    label: "Reconocimiento",
+    text: "Miembro del Sistema Nacional de Investigadores (SNI), nivel II.",
+  },
+  {
+    label: "Formación de cuadros",
+    text: "Dirección de 5 tesis de licenciatura, 12 de maestría y 11 de doctorado.",
+  },
+  {
+    label: "Liderazgo",
+    text: "Líder y representante institucional del GATTACA, grupo técnico transdisciplinario para la restauración integral de la cuenca del Atoyac.",
+  },
+  {
+    label: "Redes",
+    text: "Red Temática Gestión e Investigación del Agua, Investigadores Sociales del Agua, Expertos ODS 21 y Conflictos Ambientales de América Latina. Mentora STEAM para mujeres y niñas en la ciencia.",
+  },
+];
+
+const projects = [
+  {
+    year: "2023–2024",
+    title:
+      "Programa Municipal de Ordenamiento Territorial y Desarrollo Urbano, Santa Cruz Tlaxcala",
+  },
+  {
+    year: "2022–2023",
+    title:
+      "Programa Municipal de Ordenamiento Territorial y Desarrollo Urbano, Tepetitla de Lardizábal",
+  },
+  {
+    year: "2011",
+    title: "Programa Estatal de Acciones ante el Cambio Climático",
   },
 ];
 
 const publications = [
   {
-    year: "2024",
-    title: "Migrar el valle: movilidad y desarrollo en Tlaxcala, 1990–2020",
-    source: "Revista Mexicana de Estudios Regionales, vol. 12, pp. 45–78.",
-    type: "Artículo",
+    title:
+      "Río Atoyac: hacia una gestión integral de una problemática multifactorial",
+    type: "Libro",
   },
   {
-    year: "2023",
-    title: "Gobernanza comunitaria y resiliencia rural en el centro de México",
-    source: "El Colegio de México, Serie Desarrollo Regional, n.º 34.",
-    type: "Capítulo",
+    title: "El Zahuapan: Río–Región–Contaminación",
+    type: "Libro",
   },
   {
-    year: "2022",
-    title: "Cadenas de valor agrícola y empleo en los municipios de Tlaxcala",
-    source: "CIDE, Documento de Trabajo en Economía, n.º 2022-08.",
-    type: "Documento",
+    title: "Calidad del agua para la agricultura protegida en Tlaxcala",
+    type: "Libro",
+  },
+  {
+    title: "La crisis del agua en el siglo XXI: perspectivas y soluciones",
+    type: "Libro",
   },
 ];
+
 
 function Index() {
   return (
@@ -87,11 +134,12 @@ function Index() {
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
           <div className="flex items-baseline gap-3">
             <span className="font-display text-lg font-semibold tracking-tight">
-              M. Reyes
+              M. L. Hernández
             </span>
             <span className="hidden font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground sm:inline">
-              Ciencias Sociales
+              El Colegio de Tlaxcala, A.C.
             </span>
+
           </div>
           <nav className="flex items-center gap-6 font-mono text-[11px] uppercase tracking-[0.15em] text-muted-foreground">
             {navLinks.map((link) => (
@@ -112,21 +160,23 @@ function Index() {
         <div className="grid grid-cols-1 items-end gap-10 lg:grid-cols-12">
           <div className="animate-[rise_0.8s_cubic-bezier(0.32,0.72,0,1)_both] lg:col-span-7">
             <p className="mb-6 font-mono text-[11px] uppercase tracking-[0.25em] text-terra">
-              Investigadora · Desarrollo Regional
+              Investigadora · Desarrollo Regional · SNI II
             </p>
-            <h1 className="font-display text-[clamp(2.75rem,7vw,5.5rem)] leading-[0.95] font-semibold tracking-tight text-balance">
-              María <span className="italic text-terra">Reyes</span> Salazar
+            <h1 className="font-display text-[clamp(2.4rem,6vw,4.8rem)] leading-[0.95] font-semibold tracking-tight text-balance">
+              María de Lourdes{" "}
+              <span className="italic text-terra">Hernández</span> Rodríguez
             </h1>
             <p className="mt-6 max-w-[42ch] font-display text-xl text-pretty italic text-muted-foreground">
-              "El territorio no se planifica desde el escritorio; se lee desde
-              el camino."
+              "El agua es un Recurso de Uso Común: se gestiona con la cuenca
+              entera y con quienes la habitan."
             </p>
             <p className="mt-6 max-w-[52ch] text-sm leading-relaxed text-pretty text-muted-foreground">
-              Estudio las dinámicas de desarrollo regional en Tlaxcala:
-              migración, economía rural y gobernanza local. Mi trabajo cruza el
-              archivo con la caminata, la estadística con la memoria de quienes
-              habitan el valle.
+              Profesora-Investigadora en El Colegio de Tlaxcala, A.C. Investigo
+              la gestión del agua, los conflictos ambientales y el ordenamiento
+              territorial en Tlaxcala, desde un enfoque crítico y
+              transdisciplinario.
             </p>
+
             <div className="mt-8 flex flex-wrap items-center gap-4">
               <a
                 href="#lineas"
@@ -193,6 +243,52 @@ function Index() {
         </div>
       </section>
 
+      {/* Trajectory */}
+      <section
+        id="trayectoria"
+        className="mx-auto max-w-6xl scroll-mt-20 px-6 py-16"
+      >
+        <div className="mb-10 flex items-baseline justify-between border-b border-line pb-4">
+          <h2 className="font-display text-3xl font-semibold tracking-tight">
+            Trayectoria
+          </h2>
+          <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
+            (b)
+          </span>
+        </div>
+        <div className="grid grid-cols-1 gap-10 md:grid-cols-12">
+          <dl className="space-y-6 md:col-span-7">
+            {trajectory.map((item) => (
+              <div key={item.label} className="grid grid-cols-1 gap-1">
+                <dt className="font-mono text-[10px] uppercase tracking-[0.2em] text-cobalt">
+                  {item.label}
+                </dt>
+                <dd className="text-sm leading-relaxed text-pretty text-muted-foreground">
+                  {item.text}
+                </dd>
+              </div>
+            ))}
+          </dl>
+          <div className="prism rounded-2xl p-6 md:col-span-5">
+            <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-terra">
+              Proyectos estratégicos
+            </p>
+            <ul className="mt-5 divide-y divide-line">
+              {projects.map((project) => (
+                <li key={project.title} className="py-4 first:pt-0 last:pb-0">
+                  <span className="font-mono text-xs text-muted-foreground">
+                    {project.year}
+                  </span>
+                  <p className="mt-1 font-display text-base leading-snug tracking-tight text-pretty">
+                    {project.title}
+                  </p>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </section>
+
       {/* Publications */}
       <section
         id="publicaciones"
@@ -200,10 +296,10 @@ function Index() {
       >
         <div className="mb-8 flex items-baseline justify-between border-b border-line pb-4">
           <h2 className="font-display text-3xl font-semibold tracking-tight">
-            Publicaciones seleccionadas
+            Publicaciones destacadas
           </h2>
           <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
-            (b)
+            (c) más de 80 en total
           </span>
         </div>
         <ul className="divide-y divide-line">
@@ -212,14 +308,10 @@ function Index() {
               key={pub.title}
               className="grid grid-cols-1 gap-2 py-5 md:grid-cols-12 md:gap-6"
             >
-              <span className="font-mono text-xs text-muted-foreground md:col-span-1">
-                {pub.year}
-              </span>
-              <div className="md:col-span-8">
-                <p className="font-display text-lg tracking-tight">
+              <div className="md:col-span-9">
+                <p className="font-display text-lg tracking-tight text-pretty">
                   "{pub.title}"
                 </p>
-                <p className="mt-1 text-sm text-muted-foreground">{pub.source}</p>
               </div>
               <span className="font-mono text-[10px] uppercase tracking-[0.15em] text-muted-foreground md:col-span-3 md:text-right">
                 {pub.type}
@@ -227,7 +319,13 @@ function Index() {
             </li>
           ))}
         </ul>
+        <p className="mt-6 max-w-[60ch] text-sm leading-relaxed text-pretty text-muted-foreground">
+          Su producción académica reúne más de 80 publicaciones sobre
+          sustentabilidad hídrica, conflictos ambientales y ordenamiento
+          territorial.
+        </p>
       </section>
+
 
       {/* Contact */}
       <footer id="contacto" className="mt-8 border-t border-line">
@@ -235,25 +333,26 @@ function Index() {
           <div className="grid grid-cols-1 gap-10 md:grid-cols-12">
             <div className="md:col-span-6">
               <p className="mb-4 font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
-                (c) Contacto
+                (d) Contacto
               </p>
               <h2 className="font-display text-4xl font-semibold tracking-tight text-balance">
-                Conversemos sobre el territorio.
+                Conversemos sobre el agua y el territorio.
               </h2>
               <p className="mt-4 max-w-[40ch] text-sm leading-relaxed text-pretty text-muted-foreground">
-                Disponible para colaboraciones, docencia y proyectos de
-                investigación aplicada en el centro de México.
+                Disponible para colaboraciones, dirección de tesis y proyectos
+                de investigación aplicada en la cuenca del Atoyac y la región
+                centro de México.
               </p>
             </div>
             <div className="md:col-span-6 md:text-right">
-              <a
-                href="mailto:maria.reyes@universidad.mx"
-                className="font-display text-2xl italic text-terra transition-colors hover:text-ink"
-              >
-                maria.reyes@universidad.mx
-              </a>
+              <p className="font-display text-2xl italic text-terra">
+                El Colegio de Tlaxcala, A.C.
+              </p>
               <p className="mt-4 font-mono text-[11px] uppercase tracking-[0.15em] text-muted-foreground">
-                Departamento de Ciencias Sociales
+                Profesora-Investigadora "B"
+              </p>
+              <p className="font-mono text-[11px] uppercase tracking-[0.15em] text-muted-foreground">
+                Doctorado en Desarrollo Regional
               </p>
               <p className="font-mono text-[11px] uppercase tracking-[0.15em] text-muted-foreground">
                 Tlaxcala, México
@@ -262,11 +361,12 @@ function Index() {
           </div>
           <div className="mt-14 flex flex-col items-start justify-between gap-3 border-t border-line pt-6 sm:flex-row sm:items-center">
             <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
-              © 2026 María Reyes Salazar
+              © 2026 María de Lourdes Hernández Rodríguez
             </span>
             <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
-              Notas de campo · Tlaxcala
+              Cuenca del Atoyac · Tlaxcala
             </span>
+
           </div>
         </div>
       </footer>
