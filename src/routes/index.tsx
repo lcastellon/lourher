@@ -41,22 +41,22 @@ const researchLines = [
   {
     number: "01",
     color: "text-cobalt",
-    title: "Gestión del agua",
-    body: "El agua como Recurso de Uso Común: sustentabilidad hídrica y manejo de cuencas en Tlaxcala y la región.",
+    title: "Gobernanza ambiental y gestión hídrica territorial",
+    body: "El agua como Recurso de Uso Común: sustentabilidad hídrica, manejo de cuencas y política pública en Tlaxcala y la región.",
     delay: "60ms",
   },
   {
     number: "02",
     color: "text-terra",
-    title: "Conflictos ambientales",
-    body: "Contaminación de los ríos Atoyac y Zahuapan, y las disputas socioambientales que atraviesan el territorio.",
+    title: "Conflictos socioambientales y desigualdades territoriales",
+    body: "Contaminación de los ríos Atoyac y Zahuapan, disputas por el territorio y rutas hacia la sustentabilidad.",
     delay: "120ms",
   },
   {
     number: "03",
     color: "text-sage",
-    title: "Ordenamiento territorial",
-    body: "Programas municipales de ordenamiento territorial y desarrollo urbano, y acción ante el cambio climático.",
+    title: "Acción colectiva y gestión comunitaria del territorio",
+    body: "Participación social, metodologías participativas y ordenamiento territorial frente al cambio climático.",
     delay: "180ms",
   },
 ];
@@ -64,31 +64,40 @@ const researchLines = [
 const trajectory = [
   {
     label: "Formación",
-    text: "Doctora en Ciencias en Estrategias de Desarrollo Agrícola Regional, El Colegio de Postgraduados, Campus Puebla.",
+    text: "Doctora en Ciencias en Estrategias para el Desarrollo Agrícola Regional, Colegio de Postgraduados, Campus Puebla. Maestra en Ciencias de la Educación, Universidad Autónoma de Tlaxcala.",
   },
   {
     label: "Adscripción",
-    text: "Profesora-Investigadora \u201cB\u201d en El Colegio de Tlaxcala, A.C. Ex Coordinadora del Doctorado en Desarrollo Regional.",
+    text: "Profesora-Investigadora \u201cB\u201d en El Colegio de Tlaxcala, A.C., adscrita al Centro de Estudios en Desarrollo Regional y Análisis Económico (CEDRAE).",
+  },
+  {
+    label: "Experiencia",
+    text: "23 años de docencia e investigación a nivel posgrado. Coordinadora del Doctorado en Desarrollo Regional (2024–2025).",
   },
   {
     label: "Reconocimiento",
-    text: "Miembro del Sistema Nacional de Investigadores (SNI), nivel II.",
+    text: "Sistema Nacional de Investigadoras e Investigadores (SNII), nivel II.",
   },
   {
-    label: "Formación de cuadros",
-    text: "Dirección de 5 tesis de licenciatura, 12 de maestría y 11 de doctorado.",
+    label: "Docencia",
+    text: "Desarrollo Regional, Turismo y Sustentabilidad (Doctorado en Desarrollo Regional) y Medio Ambiente y Sustentabilidad (Maestría en Desarrollo Regional). Dirección de tesis en usos del agua, desarrollo regional, turismo alternativo y metodologías participativas.",
   },
   {
     label: "Liderazgo",
-    text: "Líder y representante institucional del GATTACA, grupo técnico transdisciplinario para la restauración integral de la cuenca del Atoyac.",
+    text: "Líder y representante institucional del GATTACA, grupo técnico transdisciplinario para la restauración integral de la cuenca del Atoyac. Mentora STEAM para mujeres y niñas en la ciencia.",
   },
   {
     label: "Redes",
-    text: "Red Temática Gestión e Investigación del Agua, Investigadores Sociales del Agua, Expertos ODS 21 y Conflictos Ambientales de América Latina. Mentora STEAM para mujeres y niñas en la ciencia.",
+    text: "Red de Investigadores Sociales sobre Agua; Red Temática Gestión e Investigación del Agua; Red Mexicana de Investigadores para el Agua; Red de Conflictos Ambientales de América Latina; Red Expertos ODS 21; Red Latinoamericana por la Defensa del Patrimonio Biocultural; Asociación Mexicana de Turismo Rural.",
   },
 ];
 
 const projects = [
+  {
+    year: "Vigente · colectivo",
+    title:
+      "Filtros de colorantes en lavanderías de mezclilla a base de piedra pómez y tela no-tejida de nylon-6: estrategia sustentable para mitigar la contaminación del río Atoyac (CIQA–UPTx–Coltlax)",
+  },
   {
     year: "2023–2024",
     title:
@@ -108,6 +117,21 @@ const projects = [
 const publications = [
   {
     title:
+      "Ávila-Orta, C. A., Alvarado-Tenorio, G., Ramírez-López, E. R., Cadenas-Pliego, G., Cruz-Delgado, V. J., Hernández-Rodríguez, M. de L., Cano-Salazar, L. F., Pérez-García, Y., Pérez-Flores, F., Sevilla-Vargas, K. I., & Soria-Argüello, G. (2025). Hybrid Nylon-6/Pumice Nonwoven Composites as Nature-Based Adsorbents for Methylene Blue Dye-Contaminated Wastewater. Water, 17(23), 3382.",
+    type: "Artículo · 2025",
+  },
+  {
+    title:
+      "Bañuelos González, D., & Hernández-Rodríguez, M. de L. (2025). Vulnerabilidad territorial del pueblo bicicletero en la región VW FINSA, Zona Metropolitana Puebla-Tlaxcala. Transporte y Territorio, 32, 212–230.",
+    type: "Artículo · 2025",
+  },
+  {
+    title:
+      "Hernández-Rodríguez, M. de L. (2025). Perspectiva STEM+CSyH: una mirada formativa y alternativa en el abordaje de la ciencia. En Campos Rico, I. V., & Rojas Contreras, J. (Coords.), Las mujeres y las niñas en las ciencias sociales: diálogos, trayectorias y complejidades. El Colegio de Tlaxcala, A.C.",
+    type: "Capítulo · 2025",
+  },
+  {
+    title:
       "Río Atoyac: hacia una gestión integral de una problemática multifactorial",
     type: "Libro",
   },
@@ -115,15 +139,11 @@ const publications = [
     title: "El Zahuapan: Río–Región–Contaminación",
     type: "Libro",
   },
-  {
-    title: "Calidad del agua para la agricultura protegida en Tlaxcala",
-    type: "Libro",
-  },
-  {
-    title: "La crisis del agua en el siglo XXI: perspectivas y soluciones",
-    type: "Libro",
-  },
 ];
+
+const scholarUrl =
+  "https://scholar.google.com.mx/citations?user=m9wmIhoAAAAJ&hl=es";
+const email = "malourdes_hernandez@coltlax.edu.mx";
 
 
 function Index() {
