@@ -1,5 +1,4 @@
 import { createFileRoute } from "@tanstack/react-router";
-import valleMap from "@/assets/valle-tlaxcala.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -177,8 +176,8 @@ function Index() {
 
       {/* Hero */}
       <section className="mx-auto max-w-6xl px-6 pt-16 pb-12">
-        <div className="grid grid-cols-1 items-end gap-10 lg:grid-cols-12">
-          <div className="animate-[rise_0.8s_cubic-bezier(0.32,0.72,0,1)_both] lg:col-span-7">
+        <div className="max-w-3xl">
+          <div className="animate-[rise_0.8s_cubic-bezier(0.32,0.72,0,1)_both]">
             <p className="mb-6 font-mono text-[11px] uppercase tracking-[0.25em] text-terra">
               Investigadora · Desarrollo Regional · SNI II
             </p>
