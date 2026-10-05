@@ -382,7 +382,19 @@ function Index() {
               </div>
             </div>
             <div className="md:col-span-6 md:text-right">
-              <p className="font-display text-2xl italic text-terra">
+              <div className="flex flex-wrap items-center gap-6 md:justify-end">
+                <img
+                  src={logoColtlax}
+                  alt="El Colegio de Tlaxcala, A.C."
+                  className="h-10 w-auto"
+                />
+                <img
+                  src={logoCedrae}
+                  alt="CEDRAE"
+                  className="h-8 w-auto"
+                />
+              </div>
+              <p className="mt-4 font-display text-2xl italic text-terra">
                 El Colegio de Tlaxcala, A.C.
               </p>
               <p className="mt-4 font-mono text-[11px] uppercase tracking-[0.15em] text-muted-foreground">
