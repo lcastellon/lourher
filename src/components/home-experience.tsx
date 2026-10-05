@@ -1,11 +1,13 @@
 import { useEffect, useState, type FormEvent } from "react";
 import { ArrowLeft, ArrowRight, ExternalLink, Send } from "lucide-react";
+import { useServerFn } from "@tanstack/react-start";
 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { cn } from "@/lib/utils";
+import { sendContactMessage } from "@/lib/contact.functions";
 
 type Publication = {
   title: string;
@@ -112,11 +114,36 @@ export function PublicationBanner({ publications }: { publications: Publication[
 }
 
 export function ContactForm() {
-  const [status, setStatus] = useState<"idle" | "unavailable">("idle");
+  const sendMessage = useServerFn(sendContactMessage);
+  const [status, setStatus] = useState<"idle" | "sending" | "sent" | "unavailable" | "error">("idle");
 
-  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    setStatus("unavailable");
+    const form = event.currentTarget;
+    const values = new FormData(form);
+    setStatus("sending");
+
+    try {
+      const result = await sendMessage({
+        data: {
+          name: String(values.get("name") ?? ""),
+          email: String(values.get("email") ?? ""),
+          subject: String(values.get("subject") ?? ""),
+          message: String(values.get("message") ?? ""),
+          website: String(values.get("website") ?? ""),
+        },
+      });
+
+      if (!result.sent) {
+        setStatus("unavailable");
+        return;
+      }
+
+      form.reset();
+      setStatus("sent");
+    } catch {
+      setStatus("error");
+    }
   };
 
   return (
@@ -144,13 +171,21 @@ export function ContactForm() {
         <Input id="contact-website" name="website" tabIndex={-1} autoComplete="off" />
       </div>
       <div className="mt-6 flex flex-wrap items-center gap-4">
-        <Button type="submit" size="lg" className="rounded-full">
+        <Button type="submit" size="lg" className="rounded-full" disabled={status === "sending"}>
           <Send aria-hidden="true" />
-          Enviar mensaje
+          {status === "sending" ? "Enviando…" : "Enviar mensaje"}
         </Button>
         {status === "unavailable" ? (
           <p className="max-w-sm text-sm leading-relaxed text-terra" role="status">
             El envío está pendiente de activar. Tus datos no se enviaron ni se guardaron.
+          </p>
+        ) : status === "sent" ? (
+          <p className="max-w-sm text-sm leading-relaxed text-sage" role="status">
+            Mensaje enviado. Gracias por ponerse en contacto.
+          </p>
+        ) : status === "error" ? (
+          <p className="max-w-sm text-sm leading-relaxed text-terra" role="status">
+            No fue posible enviar el mensaje. Inténtalo de nuevo más tarde.
           </p>
         ) : (
           <p className="text-xs leading-relaxed text-muted-foreground">
