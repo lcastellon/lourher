@@ -216,6 +216,19 @@ function Index() {
             </div>
           </div>
         </div>
+        <div className="md:col-span-4">
+          <div className="animate-[rise_0.8s_cubic-bezier(0.32,0.72,0,1)_both]" style={{ animationDelay: "120ms" }}>
+            <img
+              src={retrato}
+              alt="Dra. María de Lourdes Hernández Rodríguez"
+              className="mx-auto aspect-square w-full max-w-xs rounded-full border border-line object-cover shadow-sm"
+            />
+            <p className="mt-4 text-center font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
+              El Colegio de Tlaxcala, A.C. · CEDRAE
+            </p>
+          </div>
+        </div>
+        </div>
       </section>
 
       {/* Research lines */}
