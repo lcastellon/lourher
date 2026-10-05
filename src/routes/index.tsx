@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import retrato from "@/assets/retrato.png";
+import retrato from "@/assets/retrato-lourdes.jpeg.asset.json";
 import logoColtlax from "@/assets/logo-coltlax.png";
 import logoCedrae from "@/assets/logo-cedrae.png";
 import { ContactForm, PublicationBanner } from "@/components/home-experience";
