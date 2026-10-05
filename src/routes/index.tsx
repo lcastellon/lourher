@@ -179,7 +179,8 @@ function Index() {
 
       {/* Hero */}
       <section className="mx-auto max-w-6xl px-6 pt-16 pb-12">
-        <div className="max-w-3xl">
+        <div className="grid grid-cols-1 items-center gap-10 md:grid-cols-12">
+        <div className="max-w-3xl md:col-span-8">
           <div className="animate-[rise_0.8s_cubic-bezier(0.32,0.72,0,1)_both]">
             <p className="mb-6 font-mono text-[11px] uppercase tracking-[0.25em] text-terra">
               Investigadora · Desarrollo Regional · SNI II
