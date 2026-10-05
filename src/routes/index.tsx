@@ -342,9 +342,20 @@ function Index() {
               className="grid grid-cols-1 gap-2 py-5 md:grid-cols-12 md:gap-6"
             >
               <div className="md:col-span-9">
-                <p className="text-base leading-relaxed text-pretty">
-                  {pub.title}
-                </p>
+                {pub.url ? (
+                  <a
+                    href={pub.url}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="text-base leading-relaxed text-pretty underline decoration-line underline-offset-4 transition-colors hover:decoration-terra"
+                  >
+                    {pub.title}
+                  </a>
+                ) : (
+                  <p className="text-base leading-relaxed text-pretty">
+                    {pub.title}
+                  </p>
+                )}
               </div>
               <span className="font-mono text-[10px] uppercase tracking-[0.15em] text-muted-foreground md:col-span-3 md:text-right">
                 {pub.type}
