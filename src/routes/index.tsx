@@ -173,7 +173,7 @@ function Index() {
             </span>
 
           </div>
-          <nav className="flex items-center gap-6 font-mono text-[11px] uppercase tracking-[0.15em] text-muted-foreground">
+          <nav className="hidden items-center gap-6 font-mono text-[11px] uppercase tracking-[0.15em] text-muted-foreground sm:flex">
             {navLinks.map((link) => (
               <a
                 key={link.href}
