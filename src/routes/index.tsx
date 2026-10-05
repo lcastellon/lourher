@@ -119,27 +119,39 @@ const projects = [
 const publications = [
   {
     title:
-      "Ávila-Orta, C. A., Alvarado-Tenorio, G., Ramírez-López, E. R., Cadenas-Pliego, G., Cruz-Delgado, V. J., Hernández-Rodríguez, M. de L., Cano-Salazar, L. F., Pérez-García, Y., Pérez-Flores, F., Sevilla-Vargas, K. I., & Soria-Argüello, G. (2025). Hybrid Nylon-6/Pumice Nonwoven Composites as Nature-Based Adsorbents for Methylene Blue Dye-Contaminated Wastewater. Water, 17(23), 3382.",
+      "Hernández Rodríguez, M. de L., & Gutiérrez Castro, A. I. (2026). Del despotismo hidráulico a la gestión comunitaria: Un modelo explicativo para el río Atoyac en Tlaxcala. En J. D. Quiroz Jiménez & P. Badillo Flores (Coords.), El panorama de los problemas hídricos en México: Estudios de caso (pp. 37–59). El Colegio del Estado de Hidalgo.",
+    type: "Capítulo · 2026",
+    url: "https://www.researchgate.net/publication/414964004_Del_Despotismo_Hidraulico_a_la_gestion_comunitaria_Un_modelo_explicativo_para_el_rio_Atoyac_en_Tlaxcala",
+  },
+  {
+    title:
+      "Hernández-Rodríguez, M. de L. (2026). Turismo alternativo como estrategia de atención al patrimonio biocultural en una ANP del altiplano mexicano. En N. Campos Vera (Ed. gral.), Patrimonio cultural y diversidad: Integrando culturas en Iberoamérica (pp. 267–276). Fundación Visión Cultural de Bolivia.",
+    type: "Capítulo · 2026",
+    url: "https://www.researchgate.net/publication/403960170_Turismo_alternativo_como_estrategia_de_atencion_al_patrimonio_biocultural_en_una_ANP_del_altiplano_mexicano",
+  },
+  {
+    title:
+      "Hernández-Rodríguez, M. de L. (2026, enero-marzo). Derecho humano al agua y régimen de concesiones: Desigualdades territoriales y gobernanza comunitaria ante la Ley General de Aguas en México. Impluvium, 14(34), 103–111.",
+    type: "Artículo · 2026",
+    url: "http://www.agua.unam.mx/impluvium.html",
+  },
+  {
+    title:
+      "Ávila-Orta, C. A., Alvarado-Tenorio, G., Ramírez-López, E. R., Cadenas-Pliego, G., Cruz-Delgado, V. J., Hernández-Rodríguez, M. de L., Cano-Salazar, L. F., Pérez-García, Y., Pérez-Flores, F., Sevilla-Vargas, K. I., & Soria-Argüello, G. (2025). Hybrid Nylon-6/Pumice Nonwoven Composites as Nature-Based Adsorbents for Methylene Blue Dye-Contaminated Wastewater: Insights into Monolayer and Multilayer Adsorption Mechanisms. Water, 17(23), 3382.",
     type: "Artículo · 2025",
+    url: "https://doi.org/10.3390/w17233382",
   },
   {
     title:
-      "Bañuelos González, D., & Hernández-Rodríguez, M. de L. (2025). Vulnerabilidad territorial del pueblo bicicletero en la región VW FINSA, Zona Metropolitana Puebla-Tlaxcala. Transporte y Territorio, 32, 212–230.",
-    type: "Artículo · 2025",
+      "Hernández-Rodríguez, M. de L., Ocampo-Fletes, I., & Flores-Domínguez, A. D. (Coords. generales). (2024). Las crisis del agua del siglo XXI: perspectivas y soluciones (versión digital, 673 pp.). El Colegio de Tlaxcala, A.C.",
+    type: "Libro · 2024",
+    url: "https://doi.org/10.63042/Coltlax.108",
   },
   {
     title:
-      "Hernández-Rodríguez, M. de L. (2025). Perspectiva STEM+CSyH: una mirada formativa y alternativa en el abordaje de la ciencia. En Campos Rico, I. V., & Rojas Contreras, J. (Coords.), Las mujeres y las niñas en las ciencias sociales: diálogos, trayectorias y complejidades. El Colegio de Tlaxcala, A.C.",
-    type: "Capítulo · 2025",
-  },
-  {
-    title:
-      "Río Atoyac: hacia una gestión integral de una problemática multifactorial",
-    type: "Libro",
-  },
-  {
-    title: "El Zahuapan: Río–Región–Contaminación",
-    type: "Libro",
+      "Ávila, C. A., Hernández-Rodríguez, M. de L., & Lozano, S. A. (2022). Río Atoyac: Hacia una gestión integral de una problemática multifactorial (1.ª reimpresión, 328 pp.). Gobierno del Estado de Tlaxcala, CONACyT, CIQA, El Colegio de Tlaxcala, SEPE, CITLAX.",
+    type: "Libro · 2022",
+    url: "https://revistacoltlax.mx/omp/index.php/repositoriocoltlax/catalog/book/8",
   },
 ];
 
@@ -330,9 +342,20 @@ function Index() {
               className="grid grid-cols-1 gap-2 py-5 md:grid-cols-12 md:gap-6"
             >
               <div className="md:col-span-9">
-                <p className="text-base leading-relaxed text-pretty">
-                  {pub.title}
-                </p>
+                {pub.url ? (
+                  <a
+                    href={pub.url}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="text-base leading-relaxed text-pretty underline decoration-line underline-offset-4 transition-colors hover:decoration-terra"
+                  >
+                    {pub.title}
+                  </a>
+                ) : (
+                  <p className="text-base leading-relaxed text-pretty">
+                    {pub.title}
+                  </p>
+                )}
               </div>
               <span className="font-mono text-[10px] uppercase tracking-[0.15em] text-muted-foreground md:col-span-3 md:text-right">
                 {pub.type}
