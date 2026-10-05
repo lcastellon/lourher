@@ -1,4 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
+import retrato from "@/assets/retrato.png";
+import logoColtlax from "@/assets/logo-coltlax.png";
+import logoCedrae from "@/assets/logo-cedrae.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -176,7 +179,8 @@ function Index() {
 
       {/* Hero */}
       <section className="mx-auto max-w-6xl px-6 pt-16 pb-12">
-        <div className="max-w-3xl">
+        <div className="grid grid-cols-1 items-center gap-10 md:grid-cols-12">
+        <div className="max-w-3xl md:col-span-8">
           <div className="animate-[rise_0.8s_cubic-bezier(0.32,0.72,0,1)_both]">
             <p className="mb-6 font-mono text-[11px] uppercase tracking-[0.25em] text-terra">
               Investigadora · Desarrollo Regional · SNI II
@@ -211,6 +215,19 @@ function Index() {
               </a>
             </div>
           </div>
+        </div>
+        <div className="md:col-span-4">
+          <div className="animate-[rise_0.8s_cubic-bezier(0.32,0.72,0,1)_both]" style={{ animationDelay: "120ms" }}>
+            <img
+              src={retrato}
+              alt="Dra. María de Lourdes Hernández Rodríguez"
+              className="mx-auto aspect-square w-full max-w-xs rounded-full border border-line object-cover shadow-sm"
+            />
+            <p className="mt-4 text-center font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
+              El Colegio de Tlaxcala, A.C. · CEDRAE
+            </p>
+          </div>
+        </div>
         </div>
       </section>
 
@@ -365,7 +382,19 @@ function Index() {
               </div>
             </div>
             <div className="md:col-span-6 md:text-right">
-              <p className="font-display text-2xl italic text-terra">
+              <div className="flex flex-wrap items-center gap-6 md:justify-end">
+                <img
+                  src={logoColtlax}
+                  alt="El Colegio de Tlaxcala, A.C."
+                  className="h-10 w-auto"
+                />
+                <img
+                  src={logoCedrae}
+                  alt="CEDRAE"
+                  className="h-8 w-auto"
+                />
+              </div>
+              <p className="mt-4 font-display text-2xl italic text-terra">
                 El Colegio de Tlaxcala, A.C.
               </p>
               <p className="mt-4 font-mono text-[11px] uppercase tracking-[0.15em] text-muted-foreground">
