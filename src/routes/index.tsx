@@ -431,7 +431,7 @@ function Index() {
               © 2026 María de Lourdes Hernández Rodríguez
             </span>
             <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
-              Cuenca del Atoyac · Tlaxcala
+              Tlaxcala
             </span>
 
           </div>
