@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import retrato from "@/assets/retrato.png";
+import retrato from "@/assets/retrato-lourdes.jpeg.asset.json";
 import logoColtlax from "@/assets/logo-coltlax.png";
 import logoCedrae from "@/assets/logo-cedrae.png";
 import { ContactForm, PublicationBanner } from "@/components/home-experience";
@@ -229,7 +229,7 @@ function Index() {
         <div className="md:col-span-4">
           <div className="animate-[rise_0.8s_cubic-bezier(0.32,0.72,0,1)_both]" style={{ animationDelay: "120ms" }}>
             <img
-              src={retrato}
+              src={retrato.url}
               alt="Dra. María de Lourdes Hernández Rodríguez"
               className="mx-auto aspect-square w-full max-w-xs rounded-full border border-line object-cover shadow-sm"
             />
