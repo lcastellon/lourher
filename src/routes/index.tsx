@@ -232,6 +232,7 @@ function Index() {
               src={retrato.url}
               alt="Dra. María de Lourdes Hernández Rodríguez"
               className="mx-auto aspect-square w-full max-w-xs rounded-full border border-line object-cover shadow-sm"
+              style={{ objectPosition: "38% 30%" }}
             />
             <p className="mt-4 text-center font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
               El Colegio de Tlaxcala, A.C. · CEDRAE
