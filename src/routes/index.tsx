@@ -87,7 +87,7 @@ const trajectory = [
   },
   {
     label: "Redes",
-    text: "Red de Investigadores Sociales sobre Agua; Red Temática Gestión e Investigación del Agua; Red Mexicana de Investigadores para el Agua; Red de Conflictos Ambientales de América Latina; Red Expertos ODS 21; Red Latinoamericana por la Defensa del Patrimonio Biocultural; Asociación Mexicana de Turismo Rural.",
+    text: "Red de Investigadores Sociales sobre Agua; Red Temática Conacyt Gestión e Investigación del Agua; Red Mexicana de Investigadores para el Agua; Red de Conflictos Ambientales de América Latina; Red Expertos ODS 21; Red Latinoamericana por la Defensa del Patrimonio Biocultural; Asociación Mexicana de Turismo Rural.",
   },
 ];
 
