@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import retrato from "@/assets/retrato.png";
 import logoColtlax from "@/assets/logo-coltlax.png";
 import logoCedrae from "@/assets/logo-cedrae.png";
+import { ContactForm, PublicationBanner } from "@/components/home-experience";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -157,9 +158,6 @@ const publications = [
 
 const scholarUrl =
   "https://scholar.google.com.mx/citations?user=m9wmIhoAAAAJ&hl=es";
-const email = "malourdes_hernandez@coltlax.edu.mx";
-
-
 function Index() {
   return (
     <div className="min-h-screen bg-paper font-body text-ink antialiased selection:bg-terra/20">
@@ -335,6 +333,7 @@ function Index() {
             (c) más de 80 en total
           </span>
         </div>
+        <PublicationBanner publications={publications} />
         <ul className="divide-y divide-line">
           {publications.map((pub) => (
             <li
@@ -375,7 +374,7 @@ function Index() {
       <footer id="contacto" className="mt-8 border-t border-line">
         <div className="mx-auto max-w-6xl scroll-mt-20 px-6 py-16">
           <div className="grid grid-cols-1 gap-10 md:grid-cols-12">
-            <div className="md:col-span-6">
+            <div className="md:col-span-5">
               <p className="mb-4 font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
                 (d) Contacto
               </p>
@@ -389,12 +388,6 @@ function Index() {
               </p>
               <div className="mt-6 flex flex-wrap items-center gap-4">
                 <a
-                  href={`mailto:${email}`}
-                  className="rounded-full bg-ink px-5 py-3 text-sm font-medium text-paper transition-colors hover:bg-terra"
-                >
-                  {email}
-                </a>
-                <a
                   href={scholarUrl}
                   target="_blank"
                   rel="noreferrer"
@@ -404,8 +397,9 @@ function Index() {
                 </a>
               </div>
             </div>
-            <div className="md:col-span-6 md:text-right">
-              <div className="flex flex-wrap items-center gap-6 md:justify-end">
+            <div className="md:col-span-7">
+              <ContactForm />
+              <div className="mt-8 flex flex-wrap items-center gap-6 md:justify-end">
                 <img
                   src={logoColtlax}
                   alt="El Colegio de Tlaxcala, A.C."
