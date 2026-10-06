@@ -45,6 +45,8 @@ const english: Record<string, string> = {
   "Líder y representante institucional del GATTACA, grupo técnico transdisciplinario para la restauración integral de la cuenca del Atoyac. Mentora STEAM para mujeres y niñas en la ciencia.":
     "Leader and institutional representative of GATTACA, a transdisciplinary technical group for the comprehensive restoration of the Atoyac watershed. STEAM mentor for women and girls in science.",
   Redes: "Networks",
+  "Coadministradora de la Red de Investigadores Sociales Sobre Agua (RISSA)":
+    "Co-administrator of the Network of Social Researchers on Water (RISSA)",
   "Red de Investigadores Sociales sobre Agua; Red Temática Conacyt Gestión e Investigación del Agua; Red Mexicana de Investigadores para el Agua; Red de Conflictos Ambientales de América Latina; Red Expertos ODS 21; Red Latinoamericana por la Defensa del Patrimonio Biocultural; Asociación Mexicana de Turismo Rural.":
     "Network of Social Researchers on Water; Conacyt Thematic Network for Water Management and Research; Mexican Network of Water Researchers; Latin American Environmental Conflicts Network; SDG 21 Experts Network; Latin American Network for the Defense of Biocultural Heritage; Mexican Association of Rural Tourism.",
   "Vigente · colectivo": "Ongoing · collaborative",
