@@ -136,6 +136,8 @@ const publications = [
     url: "https://www.researchgate.net/publication/414964004_Del_Despotismo_Hidraulico_a_la_gestion_comunitaria_Un_modelo_explicativo_para_el_rio_Atoyac_en_Tlaxcala",
   },
   {
+    image: "/images/publications/patrimonio-cultural-diversidad.png",
+    imageAlt: "Patrimonio cultural y diversidad: Integrando culturas en Iberoamérica",
     title:
       "Hernández-Rodríguez, M. de L. (2026). Turismo alternativo como estrategia de atención al patrimonio biocultural en una ANP del altiplano mexicano. En N. Campos Vera (Ed. gral.), Patrimonio cultural y diversidad: Integrando culturas en Iberoamérica (pp. 267–276). Fundación Visión Cultural de Bolivia.",
     type: "Capítulo · 2026",
