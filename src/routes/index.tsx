@@ -425,6 +425,14 @@ function Index() {
                 >
                   ResearchGate
                 </a>
+                <a
+                  href="https://orcid.org/0000-0001-9425-3241"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="rounded-full border border-line px-5 py-3 text-sm font-medium transition-colors hover:border-terra hover:text-terra"
+                >
+                  ORCID
+                </a>
               </div>
             </div>
             <div className="md:col-span-7">
