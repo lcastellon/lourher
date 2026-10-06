@@ -347,7 +347,7 @@ function Index() {
             {t("Publicaciones destacadas")}
           </h2>
           <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
-            {t("(c) más de 80 en total")}
+            {t("MÁS DE 80 EN TOTAL")}
           </span>
         </div>
         <PublicationBanner publications={publications} language={lang} />
