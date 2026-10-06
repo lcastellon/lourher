@@ -168,6 +168,8 @@ const publications = [
     url: "https://doi.org/10.63042/Coltlax.108",
   },
   {
+    image: "/images/publications/rio-atoyac.png",
+    imageAlt: "Río Atoyac: Hacia una gestión integral de una problemática multifactorial",
     title:
       "Ávila, C. A., Hernández-Rodríguez, M. de L., & Lozano, S. A. (2022). Río Atoyac: Hacia una gestión integral de una problemática multifactorial (1.ª reimpresión, 328 pp.). Gobierno del Estado de Tlaxcala, CONACyT, CIQA, El Colegio de Tlaxcala, SEPE, CITLAX.",
     type: "Libro · 2022",
