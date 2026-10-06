@@ -403,6 +403,14 @@ function Index() {
                 >
                   Google Scholar
                 </a>
+                <a
+                  href="https://www.researchgate.net/profile/Maria-De-Lourdes-Hernandez-Rodriguez"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="rounded-full border border-line px-5 py-3 text-sm font-medium transition-colors hover:border-ink"
+                >
+                  ResearchGate
+                </a>
               </div>
             </div>
             <div className="md:col-span-7">
