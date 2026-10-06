@@ -160,6 +160,8 @@ const publications = [
     url: "https://doi.org/10.3390/w17233382",
   },
   {
+    image: "/images/publications/crisis-agua-siglo-xxi.png",
+    imageAlt: "Las crisis del agua en el siglo XXI: Perspectivas y soluciones",
     title:
       "Hernández-Rodríguez, M. de L., Ocampo-Fletes, I., & Flores-Domínguez, A. D. (Coords. generales). (2024). Las crisis del agua del siglo XXI: perspectivas y soluciones (versión digital, 673 pp.). El Colegio de Tlaxcala, A.C.",
     type: "Libro · 2024",
