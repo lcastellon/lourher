@@ -418,10 +418,12 @@ function Index() {
             </div>
             <div className="md:col-span-7">
               <ContactForm language={lang} />
-              <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-4 md:justify-end">
+              <div className="mt-8 flex flex-wrap items-center justify-center gap-x-6 gap-y-4">
                 <img src={logoColtlax} alt="El Colegio de Tlaxcala, A.C." className="h-10 w-auto" />
-                <img src={logoCedrae} alt="CEDRAE" className="h-8 w-auto" />
-                <img src={logoSteam} alt="Movimiento STEM+" className="h-10 w-auto" />
+                <div className="flex items-center gap-x-3">
+                  <img src={logoCedrae} alt="CEDRAE" className="h-8 w-auto" />
+                  <img src={logoSteam} alt="Movimiento STEM+" className="h-10 w-auto" />
+                </div>
               </div>
               <p className="mt-4 font-display text-2xl italic text-terra">
                 El Colegio de Tlaxcala, A.C.
