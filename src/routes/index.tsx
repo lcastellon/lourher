@@ -87,7 +87,7 @@ const trajectory = [
   },
   {
     label: "Reconocimiento",
-    text: "Sistema Nacional de Investigadoras e Investigadores (SNII), nivel II.",
+    text: "Sistema Nacional de Investigadoras e Investigadores (SNII), nivel II. Tejedoras de conocimiento (2026): Mujeres que entrelazan a Tlaxcala con el mundo a través de la ciencia. Mujeres en Conseso y Diputadas del Congreso del Estado de Tlaxcala.",
   },
   {
     label: "Docencia",

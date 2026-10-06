@@ -36,8 +36,8 @@ const english: Record<string, string> = {
   "23 años de docencia e investigación a nivel posgrado. Coordinadora del Doctorado en Desarrollo Regional (2024–2025).":
     "23 years of graduate-level teaching and research. Coordinator of the Ph.D. program in Regional Development (2024–2025).",
   Reconocimiento: "Recognition",
-  "Sistema Nacional de Investigadoras e Investigadores (SNII), nivel II.":
-    "National System of Researchers (SNII), Level II.",
+  "Sistema Nacional de Investigadoras e Investigadores (SNII), nivel II. Tejedoras de conocimiento (2026): Mujeres que entrelazan a Tlaxcala con el mundo a través de la ciencia. Mujeres en Conseso y Diputadas del Congreso del Estado de Tlaxcala.":
+    "National System of Researchers (SNII), Level II. Tejedoras de conocimiento (2026) (Weavers of Knowledge): Women who connect Tlaxcala with the world through science. Mujeres en Conseso and women members of the Tlaxcala State Congress.",
   Docencia: "Teaching",
   "Desarrollo Regional, Turismo y Sustentabilidad (Doctorado en Desarrollo Regional) y Medio Ambiente y Sustentabilidad (Maestría en Desarrollo Regional). Dirección de tesis en usos del agua, desarrollo regional, turismo alternativo y metodologías participativas.":
     "Regional Development, Tourism and Sustainability (Ph.D. in Regional Development), and Environment and Sustainability (Master’s in Regional Development). Thesis supervision on water use, regional development, alternative tourism, and participatory methodologies.",
