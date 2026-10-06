@@ -58,8 +58,8 @@ const english: Record<string, string> = {
     "Municipal Territorial Planning and Urban Development Program, Tepetitla de Lardizábal",
   "Programa Estatal de Acciones ante el Cambio Climático": "State Climate Change Action Program",
   "Investigadora · Desarrollo Regional · SNI II": "Researcher · Regional Development · SNI II",
-  '"El agua es un Recurso de Uso Común: se gestiona con la cuenca entera y con quienes la habitan."':
-    "“Water is a common-pool resource: it is managed with the entire watershed and the people who live within it.”",
+  '"El agua es un Recurso de Uso Común: en torno a ella se construyen territorios, acuerdos, conflictos y formas de vida"':
+    "“Water is a common-pool resource: territories, agreements, conflicts, and ways of life take shape around it.”",
   "Profesora-Investigadora en El Colegio de Tlaxcala, A.C., con 23 años de docencia e investigación en posgrado. Trabajo la gestión del agua, la planificación participativa y el turismo alternativo desde un enfoque crítico y transdisciplinario.":
     "Professor and Researcher at El Colegio de Tlaxcala, A.C., with 23 years of graduate-level teaching and research. My work addresses water management, participatory planning, and alternative tourism through a critical, transdisciplinary approach.",
   "Ver líneas de investigación": "Explore research areas",

@@ -207,7 +207,7 @@ function Index() {
               </h1>
               <p className="mt-6 max-w-[42ch] font-display text-xl text-pretty italic text-muted-foreground">
                 {t(
-                  '"El agua es un Recurso de Uso Común: se gestiona con la cuenca entera y con quienes la habitan."',
+                  '"El agua es un Recurso de Uso Común: en torno a ella se construyen territorios, acuerdos, conflictos y formas de vida"',
                 )}
               </p>
               <p className="mt-6 max-w-[52ch] text-sm leading-relaxed text-pretty text-muted-foreground">
