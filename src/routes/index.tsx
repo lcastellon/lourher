@@ -298,27 +298,23 @@ function Index() {
                   {t(item.label)}
                 </dt>
                 <dd className="text-sm leading-relaxed text-pretty text-muted-foreground">
-                  {item.label === "Redes" && (
-                    <a
-                      href="https://www.facebook.com/groups/Red.ISSA"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="mb-2 flex w-fit items-start gap-2 text-cobalt underline decoration-line underline-offset-4 transition-colors hover:decoration-cobalt"
-                    >
-                      <svg
-                        viewBox="0 0 24 24"
-                        fill="currentColor"
-                        className="mt-0.5 size-4 shrink-0"
-                        aria-hidden="true"
-                      >
-                        <path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.095 10.125 24v-8.437H7.078v-3.49h3.047V9.413c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.236 2.686.236v2.97h-1.513c-1.491 0-1.956.931-1.956 1.887v2.264h3.328l-.532 3.49h-2.796V24C19.612 23.095 24 18.1 24 12.073z" />
-                      </svg>
-                      {t(
-                        "Coadministradora de la Red de Investigadores Sociales Sobre Agua (RISSA)",
-                      )}
-                    </a>
-                  )}
                   {t(item.text)}
+                  {item.label === "Redes" && (
+                    <>
+                      {" "}
+                      <a
+                        href="https://www.facebook.com/groups/Red.ISSA"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-cobalt underline decoration-line underline-offset-4 transition-colors hover:decoration-cobalt"
+                      >
+                        {t(
+                          "Coadministradora de la Red de Investigadores Sociales Sobre Agua (RISSA)",
+                        )}
+                      </a>
+                      .
+                    </>
+                  )}
                 </dd>
               </div>
             ))}
