@@ -387,7 +387,7 @@ function Index() {
           <div className="grid grid-cols-1 gap-10 md:grid-cols-12">
             <div className="md:col-span-5">
               <p className="mb-4 font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
-                {t("(d) Contacto")}
+                {t("CONTACTO")}
               </p>
               <h2 className="font-display text-4xl font-semibold tracking-tight text-balance">
                 {t("Conversemos sobre el agua y el territorio.")}
