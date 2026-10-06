@@ -152,6 +152,8 @@ const publications = [
     url: "http://www.agua.unam.mx/impluvium.html",
   },
   {
+    image: "/images/publications/water-2025-nylon-pumice.png",
+    imageAlt: "Hybrid Nylon-6/Pumice Nonwoven Composites as Nature-Based Adsorbents for Methylene Blue Dye-Contaminated Wastewater — Water (2025)",
     title:
       "Ávila-Orta, C. A., Alvarado-Tenorio, G., Ramírez-López, E. R., Cadenas-Pliego, G., Cruz-Delgado, V. J., Hernández-Rodríguez, M. de L., Cano-Salazar, L. F., Pérez-García, Y., Pérez-Flores, F., Sevilla-Vargas, K. I., & Soria-Argüello, G. (2025). Hybrid Nylon-6/Pumice Nonwoven Composites as Nature-Based Adsorbents for Methylene Blue Dye-Contaminated Wastewater: Insights into Monolayer and Multilayer Adsorption Mechanisms. Water, 17(23), 3382.",
     type: "Artículo · 2025",
