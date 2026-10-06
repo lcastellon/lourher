@@ -144,6 +144,8 @@ const publications = [
     url: "https://www.researchgate.net/publication/403960170_Turismo_alternativo_como_estrategia_de_atencion_al_patrimonio_biocultural_en_una_ANP_del_altiplano_mexicano",
   },
   {
+    image: "/images/publications/impluvium-34.png",
+    imageAlt: "Impluvium, número 34: Marco jurídico para la gestión integral de los recursos hídricos y la garantía del derecho humano al agua y al saneamiento",
     title:
       "Hernández-Rodríguez, M. de L. (2026, enero-marzo). Derecho humano al agua y régimen de concesiones: Desigualdades territoriales y gobernanza comunitaria ante la Ley General de Aguas en México. Impluvium, 14(34), 103–111.",
     type: "Artículo · 2026",
