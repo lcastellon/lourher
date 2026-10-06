@@ -260,9 +260,6 @@ function Index() {
           <h2 className="font-display text-3xl font-semibold tracking-tight">
             {t("Líneas de investigación")}
           </h2>
-          <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
-            (a)
-          </span>
         </div>
         <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
           {researchLines.map((line) => (
@@ -289,9 +286,6 @@ function Index() {
       <section id="trayectoria" className="mx-auto max-w-6xl scroll-mt-20 px-6 py-16">
         <div className="mb-10 flex items-baseline justify-between border-b border-line pb-4">
           <h2 className="font-display text-3xl font-semibold tracking-tight">{t("Trayectoria")}</h2>
-          <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
-            (b)
-          </span>
         </div>
         <div className="grid grid-cols-1 gap-10 md:grid-cols-12">
           <dl className="space-y-6 md:col-span-7">

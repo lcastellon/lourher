@@ -67,10 +67,10 @@ const english: Record<string, string> = {
   "Líneas de investigación": "Research areas",
   "Proyectos estratégicos": "Strategic projects",
   "Publicaciones destacadas": "Selected publications",
-  "(c) más de 80 en total": "(c) more than 80 in total",
+  "MÁS DE 80 EN TOTAL": "MORE THAN 80 IN TOTAL",
   "Su producción académica reúne más de 80 publicaciones sobre sustentabilidad hídrica, conflictos ambientales y ordenamiento territorial.":
     "Her academic work includes more than 80 publications on water sustainability, environmental conflicts, and territorial planning.",
-  "(d) Contacto": "(d) Contact",
+  CONTACTO: "CONTACT",
   "Conversemos sobre el agua y el territorio.": "Let’s talk about water and territory.",
   "Disponible para colaboraciones, dirección de tesis y proyectos de investigación aplicada en la cuenca del Atoyac y la región centro de México.":
     "Available for collaborations, thesis supervision, and applied research projects in the Atoyac watershed and central Mexico.",
