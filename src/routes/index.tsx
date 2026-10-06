@@ -176,7 +176,7 @@ function Index() {
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
           <div className="flex items-center gap-3">
             <span className="font-display text-lg font-semibold tracking-tight">
-              M. L. Hernández
+              María de Lourdes Hernández{"\n"}Rodríguez
             </span>
             <img
               src={logoColtlax}
