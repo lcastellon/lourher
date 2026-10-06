@@ -14,6 +14,8 @@ type Publication = {
   title: string;
   type: string;
   url: string;
+  image?: string;
+  imageAlt?: string;
 };
 
 export function PublicationBanner({
@@ -66,6 +68,22 @@ export function PublicationBanner({
             <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-terra">
               {t("Publicación seleccionada")}
             </p>
+            {activePublication.image && (
+              <a
+                href={activePublication.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-4 block w-fit"
+              >
+                <img
+                  src={activePublication.image}
+                  alt={activePublication.imageAlt ?? activePublication.title}
+                  className="h-auto w-40 max-w-full rounded-md border border-line object-contain shadow-sm"
+                  width={186}
+                  height={271}
+                />
+              </a>
+            )
             <p className="mt-3 font-display text-2xl font-semibold tabular-nums">
               {String(activeIndex + 1).padStart(2, "0")}
               <span className="text-muted-foreground">

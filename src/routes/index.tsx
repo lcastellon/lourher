@@ -128,6 +128,8 @@ const projects = [
 
 const publications = [
   {
+    image: "/images/publications/panorama-problemas-hidricos-mexico.png",
+    imageAlt: "El panorama de los problemas hídricos en México: Estudios de caso",
     title:
       "Hernández Rodríguez, M. de L., & Gutiérrez Castro, A. I. (2026). Del despotismo hidráulico a la gestión comunitaria: Un modelo explicativo para el río Atoyac en Tlaxcala. En J. D. Quiroz Jiménez & P. Badillo Flores (Coords.), El panorama de los problemas hídricos en México: Estudios de caso (pp. 37–59). El Colegio del Estado de Hidalgo.",
     type: "Capítulo · 2026",
