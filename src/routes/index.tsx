@@ -1,3 +1,5 @@
+import { LanguageSelector } from "@/components/language-selector";
+import { translate, type Language } from "@/lib/translations";
 import { createFileRoute } from "@tanstack/react-router";
 import retrato from "@/assets/retrato-lourdes.jpeg.asset.json";
 import logoColtlax from "@/assets/logo-coltlax.png";
@@ -5,31 +7,37 @@ import logoCedrae from "@/assets/logo-cedrae.png";
 import { ContactForm, PublicationBanner } from "@/components/home-experience";
 
 export const Route = createFileRoute("/")({
-  head: () => ({
-    meta: [
-      {
-        title:
-          "Dra. María de Lourdes Hernández Rodríguez — Desarrollo Regional, Tlaxcala",
-      },
-      {
-        name: "description",
-        content:
-          "Profesora-Investigadora en El Colegio de Tlaxcala, A.C. Gestión del agua, conflictos ambientales y ordenamiento territorial en Tlaxcala, México.",
-      },
-      {
-        property: "og:title",
-        content:
-          "Dra. María de Lourdes Hernández Rodríguez — Desarrollo Regional, Tlaxcala",
-      },
-      {
-        property: "og:description",
-        content:
-          "Investigación transdisciplinaria sobre sustentabilidad hídrica, conflictos ambientales y ordenamiento territorial en Tlaxcala, México.",
-      },
-      { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary_large_image" },
-    ],
+  validateSearch: (search: Record<string, unknown>): { lang: Language } => ({
+    lang: search["lang"] === "en" ? "en" : "es",
   }),
+  head: ({ match }) => {
+    const t = (text: string) => translate(match.search.lang, text);
+    return {
+      meta: [
+        {
+          title: t("Dra. María de Lourdes Hernández Rodríguez — Desarrollo Regional, Tlaxcala"),
+        },
+        {
+          name: "description",
+          content: t(
+            "Profesora-Investigadora en El Colegio de Tlaxcala, A.C. Gestión del agua, conflictos ambientales y ordenamiento territorial en Tlaxcala, México.",
+          ),
+        },
+        {
+          property: "og:title",
+          content: t("Dra. María de Lourdes Hernández Rodríguez — Desarrollo Regional, Tlaxcala"),
+        },
+        {
+          property: "og:description",
+          content: t(
+            "Investigación transdisciplinaria sobre sustentabilidad hídrica, conflictos ambientales y ordenamiento territorial en Tlaxcala, México.",
+          ),
+        },
+        { property: "og:type", content: "website" },
+        { name: "twitter:card", content: "summary_large_image" },
+      ],
+    };
+  },
   component: Index,
 });
 
@@ -156,9 +164,10 @@ const publications = [
   },
 ];
 
-const scholarUrl =
-  "https://scholar.google.com.mx/citations?user=m9wmIhoAAAAJ&hl=es";
+const scholarUrl = "https://scholar.google.com.mx/citations?user=m9wmIhoAAAAJ&hl=es";
 function Index() {
+  const { lang } = Route.useSearch();
+  const t = (text: string) => translate(lang, text);
   return (
     <div className="min-h-screen bg-paper font-body text-ink antialiased selection:bg-terra/20">
       {/* Nav */}
@@ -171,74 +180,74 @@ function Index() {
             <span className="hidden font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground sm:inline">
               El Colegio de Tlaxcala, A.C.
             </span>
-
           </div>
-          <nav className="hidden items-center gap-6 font-mono text-[11px] uppercase tracking-[0.15em] text-muted-foreground sm:flex">
-            {navLinks.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                className="transition-colors hover:text-ink"
-              >
-                {link.label}
-              </a>
-            ))}
-          </nav>
+          <div className="flex items-center gap-4">
+            <nav className="hidden items-center gap-6 font-mono text-[11px] uppercase tracking-[0.15em] text-muted-foreground sm:flex">
+              {navLinks.map((link) => (
+                <a key={link.href} href={link.href} className="transition-colors hover:text-ink">
+                  {t(link.label)}
+                </a>
+              ))}
+            </nav>
+            <LanguageSelector language={lang} />
+          </div>
         </div>
       </header>
 
       {/* Hero */}
       <section className="mx-auto max-w-6xl px-6 pt-16 pb-12">
         <div className="grid grid-cols-1 items-center gap-10 md:grid-cols-12">
-        <div className="max-w-3xl md:col-span-8">
-          <div className="animate-[rise_0.8s_cubic-bezier(0.32,0.72,0,1)_both]">
-            <p className="mb-6 font-mono text-[11px] uppercase tracking-[0.25em] text-terra">
-              Investigadora · Desarrollo Regional · SNI II
-            </p>
-            <h1 className="font-display text-[clamp(2.4rem,6vw,4.8rem)] leading-[0.95] font-semibold tracking-tight text-balance">
-              María de Lourdes{" "}
-              <span className="italic text-terra">Hernández</span> Rodríguez
-            </h1>
-            <p className="mt-6 max-w-[42ch] font-display text-xl text-pretty italic text-muted-foreground">
-              "El agua es un Recurso de Uso Común: se gestiona con la cuenca
-              entera y con quienes la habitan."
-            </p>
-            <p className="mt-6 max-w-[52ch] text-sm leading-relaxed text-pretty text-muted-foreground">
-              Profesora-Investigadora en El Colegio de Tlaxcala, A.C., con 23
-              años de docencia e investigación en posgrado. Trabajo la gestión
-              del agua, la planificación participativa y el turismo alternativo
-              desde un enfoque crítico y transdisciplinario.
-            </p>
+          <div className="max-w-3xl md:col-span-8">
+            <div className="animate-[rise_0.8s_cubic-bezier(0.32,0.72,0,1)_both]">
+              <p className="mb-6 font-mono text-[11px] uppercase tracking-[0.25em] text-terra">
+                {t("Investigadora · Desarrollo Regional · SNI II")}
+              </p>
+              <h1 className="font-display text-[clamp(2.4rem,6vw,4.8rem)] leading-[0.95] font-semibold tracking-tight text-balance">
+                María de Lourdes <span className="italic text-terra">Hernández</span> Rodríguez
+              </h1>
+              <p className="mt-6 max-w-[42ch] font-display text-xl text-pretty italic text-muted-foreground">
+                {t(
+                  '"El agua es un Recurso de Uso Común: se gestiona con la cuenca entera y con quienes la habitan."',
+                )}
+              </p>
+              <p className="mt-6 max-w-[52ch] text-sm leading-relaxed text-pretty text-muted-foreground">
+                {t(
+                  "Profesora-Investigadora en El Colegio de Tlaxcala, A.C., con 23 años de docencia e investigación en posgrado. Trabajo la gestión del agua, la planificación participativa y el turismo alternativo desde un enfoque crítico y transdisciplinario.",
+                )}
+              </p>
 
-            <div className="mt-8 flex flex-wrap items-center gap-4">
-              <a
-                href="#lineas"
-                className="rounded-full bg-ink px-5 py-3 text-sm font-medium text-paper transition-colors hover:bg-terra"
-              >
-                Ver líneas de investigación
-              </a>
-              <a
-                href="#contacto"
-                className="rounded-full border border-line px-5 py-3 text-sm font-medium transition-colors hover:border-ink"
-              >
-                Contactar
-              </a>
+              <div className="mt-8 flex flex-wrap items-center gap-4">
+                <a
+                  href="#lineas"
+                  className="rounded-full bg-ink px-5 py-3 text-sm font-medium text-paper transition-colors hover:bg-terra"
+                >
+                  {t("Ver líneas de investigación")}
+                </a>
+                <a
+                  href="#contacto"
+                  className="rounded-full border border-line px-5 py-3 text-sm font-medium transition-colors hover:border-ink"
+                >
+                  {t("Contactar")}
+                </a>
+              </div>
             </div>
           </div>
-        </div>
-        <div className="md:col-span-4">
-          <div className="animate-[rise_0.8s_cubic-bezier(0.32,0.72,0,1)_both]" style={{ animationDelay: "120ms" }}>
-            <img
-              src={retrato.url}
-              alt="Dra. María de Lourdes Hernández Rodríguez"
-              className="mx-auto aspect-square w-full max-w-xs rounded-full border border-line object-cover shadow-sm"
-              style={{ objectPosition: "38% 30%" }}
-            />
-            <p className="mt-4 text-center font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
-              El Colegio de Tlaxcala, A.C. · CEDRAE
-            </p>
+          <div className="md:col-span-4">
+            <div
+              className="animate-[rise_0.8s_cubic-bezier(0.32,0.72,0,1)_both]"
+              style={{ animationDelay: "120ms" }}
+            >
+              <img
+                src={retrato.url}
+                alt={t("Dra. María de Lourdes Hernández Rodríguez")}
+                className="mx-auto aspect-square w-full max-w-xs rounded-full border border-line object-cover shadow-sm"
+                style={{ objectPosition: "38% 30%" }}
+              />
+              <p className="mt-4 text-center font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
+                El Colegio de Tlaxcala, A.C. · CEDRAE
+              </p>
+            </div>
           </div>
-        </div>
         </div>
       </section>
 
@@ -246,7 +255,7 @@ function Index() {
       <section id="lineas" className="mx-auto max-w-6xl scroll-mt-20 px-6 py-16">
         <div className="mb-10 flex items-baseline justify-between border-b border-line pb-4">
           <h2 className="font-display text-3xl font-semibold tracking-tight">
-            Líneas de investigación
+            {t("Líneas de investigación")}
           </h2>
           <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
             (a)
@@ -259,16 +268,14 @@ function Index() {
               className="prism animate-[rise_0.8s_cubic-bezier(0.32,0.72,0,1)_both] rounded-2xl p-6 transition-colors hover:bg-card/60"
               style={{ animationDelay: line.delay }}
             >
-              <span
-                className={`font-mono text-[10px] uppercase tracking-[0.2em] ${line.color}`}
-              >
+              <span className={`font-mono text-[10px] uppercase tracking-[0.2em] ${line.color}`}>
                 {line.number}
               </span>
               <h3 className="mt-3 font-display text-xl font-semibold tracking-tight">
-                {line.title}
+                {t(line.title)}
               </h3>
               <p className="mt-3 text-sm leading-relaxed text-pretty text-muted-foreground">
-                {line.body}
+                {t(line.body)}
               </p>
             </div>
           ))}
@@ -276,14 +283,9 @@ function Index() {
       </section>
 
       {/* Trajectory */}
-      <section
-        id="trayectoria"
-        className="mx-auto max-w-6xl scroll-mt-20 px-6 py-16"
-      >
+      <section id="trayectoria" className="mx-auto max-w-6xl scroll-mt-20 px-6 py-16">
         <div className="mb-10 flex items-baseline justify-between border-b border-line pb-4">
-          <h2 className="font-display text-3xl font-semibold tracking-tight">
-            Trayectoria
-          </h2>
+          <h2 className="font-display text-3xl font-semibold tracking-tight">{t("Trayectoria")}</h2>
           <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
             (b)
           </span>
@@ -291,28 +293,26 @@ function Index() {
         <div className="grid grid-cols-1 gap-10 md:grid-cols-12">
           <dl className="space-y-6 md:col-span-7">
             {trajectory.map((item) => (
-              <div key={item.label} className="grid grid-cols-1 gap-1">
+              <div key={t(item.label)} className="grid grid-cols-1 gap-1">
                 <dt className="font-mono text-[10px] uppercase tracking-[0.2em] text-cobalt">
-                  {item.label}
+                  {t(item.label)}
                 </dt>
                 <dd className="text-sm leading-relaxed text-pretty text-muted-foreground">
-                  {item.text}
+                  {t(item.text)}
                 </dd>
               </div>
             ))}
           </dl>
           <div className="prism rounded-2xl p-6 md:col-span-5">
             <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-terra">
-              Proyectos estratégicos
+              {t("Proyectos estratégicos")}
             </p>
             <ul className="mt-5 divide-y divide-line">
               {projects.map((project) => (
-                <li key={project.title} className="py-4 first:pt-0 last:pb-0">
-                  <span className="font-mono text-xs text-muted-foreground">
-                    {project.year}
-                  </span>
+                <li key={t(project.title)} className="py-4 first:pt-0 last:pb-0">
+                  <span className="font-mono text-xs text-muted-foreground">{t(project.year)}</span>
                   <p className="mt-1 font-display text-base leading-snug tracking-tight text-pretty">
-                    {project.title}
+                    {t(project.title)}
                   </p>
                 </li>
               ))}
@@ -322,25 +322,19 @@ function Index() {
       </section>
 
       {/* Publications */}
-      <section
-        id="publicaciones"
-        className="mx-auto max-w-6xl scroll-mt-20 px-6 py-16"
-      >
+      <section id="publicaciones" className="mx-auto max-w-6xl scroll-mt-20 px-6 py-16">
         <div className="mb-8 flex items-baseline justify-between border-b border-line pb-4">
           <h2 className="font-display text-3xl font-semibold tracking-tight">
-            Publicaciones destacadas
+            {t("Publicaciones destacadas")}
           </h2>
           <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
-            (c) más de 80 en total
+            {t("(c) más de 80 en total")}
           </span>
         </div>
-        <PublicationBanner publications={publications} />
+        <PublicationBanner publications={publications} language={lang} />
         <ul className="divide-y divide-line">
           {publications.map((pub) => (
-            <li
-              key={pub.title}
-              className="grid grid-cols-1 gap-2 py-5 md:grid-cols-12 md:gap-6"
-            >
+            <li key={pub.title} className="grid grid-cols-1 gap-2 py-5 md:grid-cols-12 md:gap-6">
               <div className="md:col-span-9">
                 {pub.url ? (
                   <a
@@ -352,24 +346,21 @@ function Index() {
                     {pub.title}
                   </a>
                 ) : (
-                  <p className="text-base leading-relaxed text-pretty">
-                    {pub.title}
-                  </p>
+                  <p className="text-base leading-relaxed text-pretty">{pub.title}</p>
                 )}
               </div>
               <span className="font-mono text-[10px] uppercase tracking-[0.15em] text-muted-foreground md:col-span-3 md:text-right">
-                {pub.type}
+                {t(pub.type)}
               </span>
             </li>
           ))}
         </ul>
         <p className="mt-6 max-w-[60ch] text-sm leading-relaxed text-pretty text-muted-foreground">
-          Su producción académica reúne más de 80 publicaciones sobre
-          sustentabilidad hídrica, conflictos ambientales y ordenamiento
-          territorial.
+          {t(
+            "Su producción académica reúne más de 80 publicaciones sobre sustentabilidad hídrica, conflictos ambientales y ordenamiento territorial.",
+          )}
         </p>
       </section>
-
 
       {/* Contact */}
       <footer id="contacto" className="mt-8 border-t border-line">
@@ -377,19 +368,19 @@ function Index() {
           <div className="grid grid-cols-1 gap-10 md:grid-cols-12">
             <div className="md:col-span-5">
               <p className="mb-4 font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
-                (d) Contacto
+                {t("(d) Contacto")}
               </p>
               <h2 className="font-display text-4xl font-semibold tracking-tight text-balance">
-                Conversemos sobre el agua y el territorio.
+                {t("Conversemos sobre el agua y el territorio.")}
               </h2>
               <p className="mt-4 max-w-[40ch] text-sm leading-relaxed text-pretty text-muted-foreground">
-                Disponible para colaboraciones, dirección de tesis y proyectos
-                de investigación aplicada en la cuenca del Atoyac y la región
-                centro de México.
+                {t(
+                  "Disponible para colaboraciones, dirección de tesis y proyectos de investigación aplicada en la cuenca del Atoyac y la región centro de México.",
+                )}
               </p>
               <div className="mt-6 flex flex-wrap items-center gap-4">
                 <a
-                  href={scholarUrl}
+                  href={scholarUrl.replace("hl=es", `hl=${lang}`)}
                   target="_blank"
                   rel="noreferrer"
                   className="rounded-full border border-line px-5 py-3 text-sm font-medium transition-colors hover:border-ink"
@@ -399,30 +390,22 @@ function Index() {
               </div>
             </div>
             <div className="md:col-span-7">
-              <ContactForm />
+              <ContactForm language={lang} />
               <div className="mt-8 flex flex-wrap items-center gap-6 md:justify-end">
-                <img
-                  src={logoColtlax}
-                  alt="El Colegio de Tlaxcala, A.C."
-                  className="h-10 w-auto"
-                />
-                <img
-                  src={logoCedrae}
-                  alt="CEDRAE"
-                  className="h-8 w-auto"
-                />
+                <img src={logoColtlax} alt="El Colegio de Tlaxcala, A.C." className="h-10 w-auto" />
+                <img src={logoCedrae} alt="CEDRAE" className="h-8 w-auto" />
               </div>
               <p className="mt-4 font-display text-2xl italic text-terra">
                 El Colegio de Tlaxcala, A.C.
               </p>
               <p className="mt-4 font-mono text-[11px] uppercase tracking-[0.15em] text-muted-foreground">
-                Profesora-Investigadora "B" · CEDRAE
+                {t('Profesora-Investigadora "B" · CEDRAE')}
               </p>
               <p className="font-mono text-[11px] uppercase tracking-[0.15em] text-muted-foreground">
-                Doctorado en Desarrollo Regional
+                {t("Doctorado en Desarrollo Regional")}
               </p>
               <p className="font-mono text-[11px] uppercase tracking-[0.15em] text-muted-foreground">
-                Tlaxcala, Tlaxcala, México
+                {t("Tlaxcala, Tlaxcala, México")}
               </p>
             </div>
           </div>
@@ -433,7 +416,6 @@ function Index() {
             <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
               Tlaxcala
             </span>
-
           </div>
         </div>
       </footer>
