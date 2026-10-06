@@ -8,6 +8,7 @@ import logoSteam from "@/assets/logo-steam.png";
 import { ContactForm, PublicationBanner } from "@/components/home-experience";
 
 export const Route = createFileRoute("/")({
+  staticData: { sitemap: true },
   validateSearch: (search: Record<string, unknown>): { lang: Language } => ({
     lang: search["lang"] === "en" ? "en" : "es",
   }),
