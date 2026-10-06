@@ -399,7 +399,7 @@ function Index() {
                   href={scholarUrl.replace("hl=es", `hl=${lang}`)}
                   target="_blank"
                   rel="noreferrer"
-                  className="rounded-full border border-line px-5 py-3 text-sm font-medium transition-colors hover:border-ink"
+                  className="rounded-full border border-line px-5 py-3 text-sm font-medium transition-colors hover:border-terra hover:text-terra"
                 >
                   Google Scholar
                 </a>
@@ -407,7 +407,7 @@ function Index() {
                   href="https://www.researchgate.net/profile/Maria-De-Lourdes-Hernandez-Rodriguez"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="rounded-full border border-line px-5 py-3 text-sm font-medium transition-colors hover:border-ink"
+                  className="rounded-full border border-line px-5 py-3 text-sm font-medium transition-colors hover:border-terra hover:text-terra"
                 >
                   ResearchGate
                 </a>
