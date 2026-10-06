@@ -140,7 +140,7 @@
 
 @utility prism {
   background:
-    linear-gradient(115deg, oklch(0.62 0.19 35 / 0.1), oklch(0.52 0.13 255 / 0.1) 55%, oklch(0.52 0.04 165 / 0.08)),
+    linear-gradient(115deg, oklch(0.55 0.15 278 / 0.1), oklch(0.52 0.13 255 / 0.1) 55%, oklch(0.52 0.04 165 / 0.08)),
     oklch(0.967 0.019 95 / 0.55);
   backdrop-filter: blur(9px);
   -webkit-backdrop-filter: blur(9px);
@@ -151,7 +151,7 @@
 
   &:where(.dark *) {
     background:
-      linear-gradient(115deg, oklch(0.68 0.14 38 / 0.08), oklch(0.68 0.11 255 / 0.08) 55%, oklch(0.65 0.045 165 / 0.06)),
+      linear-gradient(115deg, oklch(0.72 0.11 278 / 0.08), oklch(0.68 0.11 255 / 0.08) 55%, oklch(0.65 0.045 165 / 0.06)),
       oklch(0.25 0.024 45 / 0.55);
     box-shadow:
       inset 0 1px 0 oklch(1 0 0 / 0.08),
