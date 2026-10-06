@@ -173,13 +173,15 @@ function Index() {
       {/* Nav */}
       <header className="sticky top-0 z-30 border-b border-line bg-paper/70 backdrop-blur-md">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-          <div className="flex items-baseline gap-3">
+          <div className="flex items-center gap-3">
             <span className="font-display text-lg font-semibold tracking-tight">
               M. L. Hernández
             </span>
-            <span className="hidden font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground sm:inline">
-              El Colegio de Tlaxcala, A.C.
-            </span>
+            <img
+              src={logoColtlax}
+              alt="El Colegio de Tlaxcala, A.C."
+              className="hidden h-8 w-auto sm:block"
+            />
           </div>
           <div className="flex items-center gap-4">
             <nav className="hidden items-center gap-6 font-mono text-[11px] uppercase tracking-[0.15em] text-muted-foreground sm:flex">
