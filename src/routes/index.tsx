@@ -4,6 +4,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import retrato from "@/assets/retrato-lourdes.jpeg.asset.json";
 import logoColtlax from "@/assets/logo-coltlax.png";
 import logoCedrae from "@/assets/logo-cedrae.png";
+import logoSteam from "@/assets/logo-steam.png";
 import { ContactForm, PublicationBanner } from "@/components/home-experience";
 
 export const Route = createFileRoute("/")({
@@ -417,9 +418,10 @@ function Index() {
             </div>
             <div className="md:col-span-7">
               <ContactForm language={lang} />
-              <div className="mt-8 flex flex-wrap items-center gap-6 md:justify-end">
+              <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-4 md:justify-end">
                 <img src={logoColtlax} alt="El Colegio de Tlaxcala, A.C." className="h-10 w-auto" />
                 <img src={logoCedrae} alt="CEDRAE" className="h-8 w-auto" />
+                <img src={logoSteam} alt="Movimiento STEM+" className="h-10 w-auto" />
               </div>
               <p className="mt-4 font-display text-2xl italic text-terra">
                 El Colegio de Tlaxcala, A.C.
