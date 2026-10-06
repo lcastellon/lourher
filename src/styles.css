@@ -7,7 +7,7 @@
 /*
  * Design system — "Prismatic field notes"
  * Editorial-academic aesthetic rooted in central Mexico:
- * warm paper, ink, terracotta, cobalt and sage accents.
+ * warm paper, ink, indigo, cobalt and sage accents.
  */
 
 @theme inline {
@@ -56,7 +56,7 @@
 
   --paper: oklch(0.967 0.019 95);
   --ink: oklch(0.235 0.028 45);
-  --terra: oklch(0.58 0.155 35);
+  --terra: oklch(0.5 0.13 278);
   --cobalt: oklch(0.52 0.125 255);
   --sage: oklch(0.515 0.04 165);
   --line: oklch(0.235 0.028 45 / 0.12);
@@ -85,7 +85,7 @@
 .dark {
   --paper: oklch(0.21 0.022 45);
   --ink: oklch(0.95 0.012 95);
-  --terra: oklch(0.68 0.14 38);
+  --terra: oklch(0.72 0.11 278);
   --cobalt: oklch(0.68 0.11 255);
   --sage: oklch(0.65 0.045 165);
   --line: oklch(0.95 0.012 95 / 0.14);
