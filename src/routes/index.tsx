@@ -208,9 +208,9 @@ function Index() {
                 {t("Investigadora · Desarrollo Regional · SNI II")}
               </p>
               <h1 className="font-display text-[clamp(2.4rem,6vw,4.8rem)] leading-[0.95] font-semibold tracking-tight text-balance">
-                María de Lourdes <span className="italic text-terra">Hernández</span> Rodríguez
+                María de Lourdes <span className="italic text-[#b9233e]">Hernández</span> Rodríguez
               </h1>
-              <p className="mt-6 max-w-[42ch] font-display text-xl text-pretty italic text-muted-foreground">
+              <p className="mt-6 max-w-[42ch] font-display text-xl text-pretty italic text-terra">
                 {t(
                   '"El agua es un Recurso de Uso Común: en torno a ella se construyen territorios, acuerdos, conflictos y formas de vida"',
                 )}
