@@ -83,7 +83,7 @@ export function PublicationBanner({
                   height={271}
                 />
               </a>
-            )
+            )}
             <p className="mt-3 font-display text-2xl font-semibold tabular-nums">
               {String(activeIndex + 1).padStart(2, "0")}
               <span className="text-muted-foreground">
