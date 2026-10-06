@@ -93,7 +93,7 @@ const trajectory = [
   },
   {
     label: "Docencia",
-    text: "Doctorado en Desarrollo Regional. Maestría en Desarrollo Regional. Maestría en Turismo Regional Sustentable.",
+    text: "Doctorado en Desarrollo Regional. Maestría en Desarrollo Regional. Maestría en Turismo Regional Sustentable. Dirección de tesis en gestión del agua, desarrollo regional, turismo alternativo y metodologías participativas.",
   },
   {
     label: "Liderazgo",

@@ -41,8 +41,8 @@ const english: Record<string, string> = {
   "Tejedoras de conocimiento (2026): Mujeres que entrelazan a Tlaxcala con el mundo a través de la ciencia. Mujeres en Conseso y Diputadas del Congreso del Estado de Tlaxcala.":
     "Tejedoras de conocimiento (2026) (Weavers of Knowledge): Women who connect Tlaxcala with the world through science. Mujeres en Conseso and women members of the Tlaxcala State Congress.",
   Docencia: "Teaching",
-  "Doctorado en Desarrollo Regional. Maestría en Desarrollo Regional. Maestría en Turismo Regional Sustentable.":
-    "Ph.D. in Regional Development. Master’s in Regional Development. Master’s in Sustainable Regional Tourism.",
+  "Doctorado en Desarrollo Regional. Maestría en Desarrollo Regional. Maestría en Turismo Regional Sustentable. Dirección de tesis en gestión del agua, desarrollo regional, turismo alternativo y metodologías participativas.":
+    "Ph.D. in Regional Development. Master’s in Regional Development. Master’s in Sustainable Regional Tourism. Thesis supervision in water management, regional development, alternative tourism, and participatory methodologies.",
   Liderazgo: "Leadership",
   "Líder y representante institucional del GATTACA, grupo técnico transdisciplinario para la restauración integral de la cuenca del Atoyac. Mentora STEAM para mujeres y niñas en la ciencia.":
     "Leader and institutional representative of GATTACA, a transdisciplinary technical group for the comprehensive restoration of the Atoyac watershed. STEAM mentor for women and girls in science.",
