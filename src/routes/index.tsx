@@ -69,7 +69,7 @@ const researchLines = [
     number: "03",
     color: "text-sage",
     title: "Acción colectiva y gestión comunitaria del territorio",
-    body: "Participación social, metodologías participativas y ordenamiento territorial frente al cambio climático.",
+    body: "Participación social, metodologías participativas y ordenamiento territorial.",
     delay: "180ms",
   },
 ];

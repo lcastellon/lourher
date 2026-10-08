@@ -24,8 +24,8 @@ const english: Record<string, string> = {
     "Pollution in the Atoyac and Zahuapan rivers, territorial disputes, and pathways toward sustainability.",
   "Acción colectiva y gestión comunitaria del territorio":
     "Collective action and community-based territorial management",
-  "Participación social, metodologías participativas y ordenamiento territorial frente al cambio climático.":
-    "Social participation, participatory methodologies, and territorial planning in response to climate change.",
+  "Participación social, metodologías participativas y ordenamiento territorial.":
+    "Social participation, participatory methodologies, and territorial planning.",
   Formación: "Education",
   "Doctora en Ciencias en Estrategias para el Desarrollo Agrícola Regional, Colegio de Postgraduados, Campus Puebla. Maestra en Ciencias de la Educación, Universidad Autónoma de Tlaxcala.":
     "Ph.D. in Strategies for Regional Agricultural Development, Colegio de Postgraduados, Puebla Campus. M.Sc. in Education, Universidad Autónoma de Tlaxcala.",
