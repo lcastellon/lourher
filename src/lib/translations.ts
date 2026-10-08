@@ -16,7 +16,7 @@ const english: Record<string, string> = {
   Contacto: "Contact",
   "Gobernanza ambiental y gestión hídrica territorial":
     "Environmental governance and territorial water management",
-  "El agua como Recurso de Uso Común: sustentabilidad hídrica, manejo de cuencas y política pública en Tlaxcala y la región.":
+  "El agua como Recurso de Uso Común: sustentabilidad hídrica, gestión de cuencas y política pública en Tlaxcala y la región.":
     "Water as a common-pool resource: water sustainability, watershed management, and public policy in Tlaxcala and the surrounding region.",
   "Conflictos socioambientales y desigualdades territoriales":
     "Socio-environmental conflicts and territorial inequalities",

@@ -55,7 +55,7 @@ const researchLines = [
     number: "01",
     color: "text-cobalt",
     title: "Gobernanza ambiental y gestión hídrica territorial",
-    body: "El agua como Recurso de Uso Común: sustentabilidad hídrica, manejo de cuencas y política pública en Tlaxcala y la región.",
+    body: "El agua como Recurso de Uso Común: sustentabilidad hídrica, gestión de cuencas y política pública en Tlaxcala y la región.",
     delay: "60ms",
   },
   {
